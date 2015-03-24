@@ -1,0 +1,1568 @@
+2015-03-12 18:32:01,947 DEBUG [10] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-12 18:32:02,293 ERROR [10] HtmlAgilityPack.Program - Something went wrong! Details:
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Gruby\Projekty\Laboratory\trunk\HtmlAgilityPack\Page\PaintballWikiPage.htm'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at HtmlAgilityPack.HtmlDocument.DetectEncoding(String path)
+   at HtmlAgilityPack.HtmlDocument.DetectEncodingAndLoad(String path, Boolean detectEncoding)
+   at HtmlAgilityPack.HtmlWeb.Load(String url, String method)
+   at HtmlAgilityPack.HtmlWeb.Load(String url)
+   at HtmlAgilityPack.Program.Main(String[] args) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 24
+2015-03-12 18:33:10,138 DEBUG [8] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-12 18:33:14,189 INFO [8] HtmlAgilityPack.Program - Document loaded
+2015-03-12 18:33:14,205 INFO [8] HtmlAgilityPack.Program - Number of links found: 39
+2015-03-12 18:33:14,216 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Paintballs, link text=paintballs
+2015-03-12 18:33:14,217 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Paintball_equipment#Paintballs, link text=paintballs
+2015-03-12 18:33:14,217 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Paintball_marker, link text=paintball marker
+2015-03-12 18:33:14,217 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Paintball_equipment, link text=paintball equipment
+2015-03-12 18:33:14,218 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Scenario_paintball, link text=scenario paintball
+2015-03-12 18:33:14,218 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Speedball_(paintball), link text=Speedball (paintball)
+2015-03-12 18:33:14,218 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/List_of_paintball_leagues, link text=List of paintball leagues
+2015-03-12 18:33:14,218 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/List_of_professional_paintball_teams, link text=List of professional paintball teams
+2015-03-12 18:33:14,219 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Player_positions_(paintball), link text=Player positions (paintball)
+2015-03-12 18:33:14,219 DEBUG [8] HtmlAgilityPack.Program - Link href=/w/index.php?title=Digital_paintball_3&amp;action=edit&amp;redlink=1, link text=Digital paintball 3
+2015-03-12 18:33:14,220 DEBUG [8] HtmlAgilityPack.Program - Link href=http://web.archive.org/web/20110706112533/http://www.themercury.com.au/article/2009/09/09/96241_tasmania-news.html, link text="Push to legalise paintball"
+2015-03-12 18:33:14,220 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.mayhem-paintball.co.uk/news/how-semi-automatic-paintball-guns-work, link text="How semi-automatic paintball guns work (animation)"
+2015-03-12 18:33:14,220 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.boston.com/business/articles/2005/01/13/indoor_paintball_site_targets_the_rapid_growth_of_sport/, link text="Indoor paintball site targets the rapid growth of sport"
+2015-03-12 18:33:14,220 DEBUG [8] HtmlAgilityPack.Program - Link href=http://web.archive.org/web/20081013133046/http://timesnews.net/article.php?id=9008463, link text="Video Report – Blountville-based paintball team ranked fifth in nation, heading to World Championships"
+2015-03-12 18:33:14,241 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.gatsplat.com/fpo.asp, link text="Field Paint Only policy and explanation at GatSplat in Lewisville, TX, an indoor paintball facility"
+2015-03-12 18:33:14,241 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.terrymartin.me.uk/paintball.html, link text="Terry Reflects on early paintball days"
+2015-03-12 18:33:14,241 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.nj.com/news/index.ssf/2010/06/nj_terror_plot_highlights_use.html, link text="N.J. terror plot highlights use of paintball facilities for training exercise"
+2015-03-12 18:33:14,241 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.nydailynews.com/ny_local/2010/06/07/2010-06-07_paintball_just_one_way_for_them_to_practice.html, link text="Suspected New Jersey terror wannabes trained at paintball ranges, feds say"
+2015-03-12 18:33:14,241 DEBUG [8] HtmlAgilityPack.Program - Link href=http://ip.bmj.com/cgi/pmidlookup?view=long&amp;pmid=15178668, link text="Injuries from paintball game related activities in the United States, 1997–2001"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://linkinghub.elsevier.com/retrieve/pii/S0002-9394(08)00650-8, link text="Ocular trauma and visual outcome secondary to paintball projectiles"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.ctv.ca/servlet/ArticleNews/print/CTVNews/20070628/paintball_injuries_070628/20070628/?hub=Health&amp;subhub=PrintStory, link text="Doctors say paintball too dangerous for kids"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.cbc.ca/canada/ottawa/story/2007/05/11/paintball-070511.html, link text="Girl, 17, and man, 20, charged in Ottawa paintball shooting"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.metronews.ca/ottawa/local/article/24032--appalled-paintballers-help-victim, link text="‘Appalled’ paintballers help victim"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.snipersden.com.au/paintball-age-limit-change-2/, link text=http://www.snipersden.com.au/paintball-age-limit-change-2/
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.thelocal.de/national/20090514-19275.html, link text="MPs rush new gun law but back down from paintball ban"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://news.bbc.co.uk/1/hi/world/europe/8041320.stm, link text="World | Europe | Germany moves to outlaw paintball"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.telegraph.co.uk/news/worldnews/europe/germany/5291891/Germany-to-ban-paintball-in-wake-of-high-school-shooting.html, link text="Germany to ban paintball in wake of high school shooting"
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://asylumpaintball.co.nz/changes-to-nz-firearm-laws-paintball-full-auto-ramping-now-nz-legal/, link text=http://asylumpaintball.co.nz/changes-to-nz-firearm-laws-paintball-full-auto-ramping-now-nz-legal/
+2015-03-12 18:33:14,242 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.ukpba.org.uk/paintball/about-paintball/what-is-the-ukpba/, link text=http://www.ukpba.org.uk/paintball/about-paintball/what-is-the-ukpba/
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.cga.ct.gov/2008/rpt/2008-R-0571.htm, link text="Legislation on paintball guns"
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=http://www.paintballassociationvictoria.org.au, link text=http://www.paintballassociationvictoria.org.au
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=http://paintballarena.dk/, link text=http://paintballarena.dk/
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/List_of_paintball_markers, link text=List of paintball markers
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Electropneumatic_paintball_marker, link text=Electropneumatic paintball marker
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Scenario_paintball, link text=Scenario paintball
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/Stock_paintball, link text=Stock paintball
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/List_of_paintball_leagues, link text=List of paintball leagues
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=/wiki/List_of_professional_paintball_teams, link text=List of professional paintball teams
+2015-03-12 18:33:14,243 DEBUG [8] HtmlAgilityPack.Program - Link href=//en.wiktionary.org/wiki/Appendix:Glossary_of_paintball_terms, link text=Appendix:Glossary of paintball terms
+2015-03-12 18:33:14,246 INFO [8] HtmlAgilityPack.Program - All work done!
+2015-03-12 18:44:13,175 DEBUG [10] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-12 18:44:14,657 INFO [10] HtmlAgilityPack.Program - Document loaded
+2015-03-12 18:44:14,664 INFO [10] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-12 18:44:14,670 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10 keys
+Earbuds 66 Timed Drop
+
+2015-03-12 18:44:14,670 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10 keys
+Earbuds 13 Traded
+
+2015-03-12 18:44:14,670 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10 keys
+Earbuds 38 Timed Drop
+
+2015-03-12 18:44:14,670 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10 keys
+Earbuds 63 Timed Drop
+
+2015-03-12 18:44:14,670 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10 keys
+Earbuds 52 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.12 keys
+Earbuds 97 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.12 keys
+Earbuds 42 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.12 keys
+Earbuds 66 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.18 keys
+Earbuds 82 Timed Drop
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 49 Timed Drop
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 34 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 51 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 19 Timed Drop
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 52 Traded
+
+2015-03-12 18:44:14,671 DEBUG [10] HtmlAgilityPack.Program - Link href=Earbuds, link text=
+ 10.24 keys
+Earbuds 40 Traded
+
+2015-03-12 18:44:14,672 INFO [10] HtmlAgilityPack.Program - All work done!
+2015-03-12 18:45:50,748 DEBUG [11] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-12 18:45:52,130 INFO [11] HtmlAgilityPack.Program - Document loaded
+2015-03-12 18:45:52,137 INFO [11] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 66 Timed Drop
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 13 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 38 Timed Drop
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 63 Timed Drop
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 52 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 97 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 42 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 66 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-12 18:45:52,142 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 82 Timed Drop
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 49 Timed Drop
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 34 Traded
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 51 Traded
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 19 Timed Drop
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 52 Traded
+
+2015-03-12 18:45:52,143 DEBUG [11] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 40 Traded
+
+2015-03-12 18:45:52,143 INFO [11] HtmlAgilityPack.Program - All work done!
+2015-03-12 18:47:35,405 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-12 18:47:37,146 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-12 18:47:37,153 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 66 Timed Drop
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 13 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 38 Timed Drop
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 63 Timed Drop
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 52 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 97 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 42 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 66 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 82 Timed Drop
+
+2015-03-12 18:47:37,160 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 49 Timed Drop
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 34 Traded
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 51 Traded
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 19 Timed Drop
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 52 Traded
+
+2015-03-12 18:47:37,161 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 4 ref, link text=
+ 10.24 keys
+Earbuds 40 Traded
+
+2015-03-12 18:47:37,162 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 15:38:20,043 DEBUG [10] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 15:38:21,457 INFO [10] HtmlAgilityPack.Program - Document loaded
+2015-03-13 15:38:21,464 INFO [10] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 15:38:21,469 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 1 ref, link text=
+ 10.06 keys
+Earbuds 34 Traded
+
+2015-03-13 15:38:21,469 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 1 ref, link text=
+ 10.06 keys
+Earbuds 4 Timed Drop
+
+2015-03-13 15:38:21,469 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 15:38:21,469 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 15:38:21,470 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 15:38:21,471 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 9 Traded
+
+2015-03-13 15:38:21,471 INFO [10] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:03:55,843 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:03:58,096 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:03:58,103 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:03:58,129 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1 ref, link text=
+ 10.06 keys
+Earbuds 4 Timed Drop
+
+2015-03-13 16:03:58,129 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:03:58,130 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 9 Traded
+
+2015-03-13 16:03:58,131 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Traded
+
+2015-03-13 16:03:58,131 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:08:33,151 DEBUG [8] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:08:34,328 INFO [8] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:08:34,333 INFO [8] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:08:34,344 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 1 ref, link text=
+ 10.06 keys
+Earbuds 4 Timed Drop
+
+2015-03-13 16:08:34,344 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:08:34,344 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:08:34,345 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 9 Traded
+
+2015-03-13 16:08:34,346 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Traded
+
+2015-03-13 16:08:34,346 INFO [8] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:14:41,854 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:14:42,939 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:14:42,948 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-13 16:14:42,976 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 9 Traded
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Traded
+
+2015-03-13 16:14:42,977 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 12 ref, link text=
+ 10.71 keys
+Earbuds 56 Traded
+
+2015-03-13 16:14:42,978 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:17:07,159 DEBUG [8] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:17:08,400 INFO [8] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:17:08,405 INFO [8] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:17:08,410 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 29 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 14 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:17:08,411 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:17:08,412 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 9 Traded
+
+2015-03-13 16:17:08,412 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Traded
+
+2015-03-13 16:17:08,412 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 12 ref, link text=
+ 10.71 keys
+Earbuds 56 Traded
+
+2015-03-13 16:17:08,412 INFO [8] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:26:51,355 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:26:55,033 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:26:55,038 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 85 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 88 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 22 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:26:55,059 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:26:55,060 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:26:55,060 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:28:41,919 DEBUG [10] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:28:43,111 INFO [10] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:28:43,116 INFO [10] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 85 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 88 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 22 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:28:43,143 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:28:43,144 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:28:43,144 INFO [10] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:29:34,229 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:29:35,430 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:29:35,435 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 85 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 88 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 22 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:29:35,549 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:29:35,550 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:29:35,550 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 16:30:41,661 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 16:30:42,946 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 16:30:42,951 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 16:30:42,971 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 85 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 88 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 22 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 59 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 36 Timed Drop
+
+2015-03-13 16:30:42,972 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 24 Traded
+
+2015-03-13 16:30:42,973 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 49 Timed Drop
+
+2015-03-13 16:30:42,973 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 16:30:42,973 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:09:37,265 DEBUG [10] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 17:09:38,476 INFO [10] HtmlAgilityPack.Program - Document loaded
+2015-03-13 17:09:38,483 INFO [10] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:09:38,524 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:09:38,525 DEBUG [10] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:09:38,525 INFO [10] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:10:14,059 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 17:10:15,261 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 17:10:15,266 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:10:15,285 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:10:15,286 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:10:15,286 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:12:29,361 DEBUG [8] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 17:12:30,828 INFO [8] HtmlAgilityPack.Program - Document loaded
+2015-03-13 17:12:30,837 INFO [8] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:12:30,843 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:12:30,844 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:12:30,844 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:12:30,844 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:12:30,844 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:12:30,844 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:12:30,844 INFO [8] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:19:26,446 DEBUG [9] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 17:19:27,777 INFO [9] HtmlAgilityPack.Program - Document loaded
+2015-03-13 17:19:27,783 INFO [9] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:19:27,789 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:19:27,790 DEBUG [9] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:19:27,790 INFO [9] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:20:45,863 DEBUG [8] HtmlAgilityPack.Program - ########################### Application start ###########################
+2015-03-13 17:20:46,925 INFO [8] HtmlAgilityPack.Program - Document loaded
+2015-03-13 17:20:46,930 INFO [8] HtmlAgilityPack.Program - Number of links found: 20
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:20:46,936 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:20:46,937 DEBUG [8] HtmlAgilityPack.Program - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:20:46,937 INFO [8] HtmlAgilityPack.Program - All work done!
+2015-03-13 17:27:03,818 DEBUG [9] HtmlAgilityPack.Method - ########################### Application start ###########################
+2015-03-13 17:27:05,402 INFO [9] HtmlAgilityPack.Method - Document loaded
+2015-03-13 17:27:05,408 INFO [9] HtmlAgilityPack.Method - Number of links found: 20
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 83 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 82 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 89 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Timed Drop
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 84 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 91 Timed Drop
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, link text=
+ 10 keys
+Earbuds 30 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 1.66 ref, link text=
+ 10.1 keys
+Earbuds 26 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 60 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 58 Traded
+
+2015-03-13 17:27:05,415 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 21 Timed Drop
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 2 ref, link text=
+ 10.12 keys
+Earbuds 91 Traded
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 6 Traded
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 3 ref, link text=
+ 10.18 keys
+Earbuds 8 Traded
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 31 Timed Drop
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 33 Timed Drop
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 3.88 ref, link text=
+ 10.23 keys
+Earbuds 30 Timed Drop
+
+2015-03-13 17:27:05,416 DEBUG [9] HtmlAgilityPack.Method - Link href=10 keys, 5 ref, link text=
+ 10.29 keys
+Earbuds 88 Traded
+
+2015-03-13 17:27:05,416 INFO [9] HtmlAgilityPack.Method - All work done!

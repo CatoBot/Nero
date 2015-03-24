@@ -1,0 +1,14 @@
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\log4net.config
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.exe
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.dll
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\log4net.dll
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\RegexProvider.dll
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\YuriyGuts.RegexBuilder.dll
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\HtmlAgilityPack.xml
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\log4net.xml
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\RegexProvider.pdb
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\Debug\RegexProvider.xml
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\obj\x86\Debug\HtmlAgilityPack.exe
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\obj\x86\Debug\HtmlAgilityPack.pdb
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\obj\x86\Debug\HtmlAgilityPack.csprojResolveAssemblyReference.cache

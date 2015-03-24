@@ -1,0 +1,3 @@
+Simple example of how to use Html Agility Pack and log4net (Visual Studio 2010 Pro solution).
+
+If something is not working try to use "Unlock" option on zip file...
