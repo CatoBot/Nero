@@ -1,3 +1,1 @@
-Simple example of how to use Html Agility Pack and log4net (Visual Studio 2010 Pro solution).
-
-If something is not working try to use "Unlock" option on zip file...
+Some methods using htmlagilitypack and selenium to webscrape sites like backpack.tf
