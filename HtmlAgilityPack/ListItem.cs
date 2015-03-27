@@ -14,7 +14,7 @@ namespace HtmlAgilityPack
     class WebPost
     {
 
-        public static void ReListAll()
+        public static void ReListAll()//I can probably remove some of these implicit waits without problem
         {
             ChromeOptions options = new ChromeOptions();
 
@@ -29,7 +29,7 @@ namespace HtmlAgilityPack
                 {
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                     
-                    int number_left = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist")).Count;
+                    int number_left = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist")).Count; //count the # of buttons to see if we're done yet
 
                     if (number_left == 0)
                     {
@@ -48,44 +48,36 @@ namespace HtmlAgilityPack
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                         var submitbutton = driver.FindElement(By.Id("button_save"));
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-                        bool enabled = submitbutton.Enabled;
+                        bool enabled = submitbutton.Enabled; //check if button is operational. Attempting to click disabled buttons was causing invalid element state errors before
                         if(enabled)
                         {
                             submitbutton.Click();
                         }
                         else 
                         {
-                            break;
+                            break; //I think if it's disabled, the action went through, not entirely sure though
                         }
  
-
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                         string url = driver.Url;
                         if (url == "http://backpack.tf/classifieds/?steamid=76561198049414145")
                         {
-                            done_1 = true;
+                            done_1 = true; //break out of inner relist loop to go to next item
                         }
 
                         else if (i > 1 && !done_1)
                         {
-                            Console.WriteLine("Cannot post after 3 retries");
-                            Console.Read();
+                            Console.WriteLine("Cannot post after 3 retries"+Environment.NewLine+url);
+                            Console.Read(); //I should log this
                         }
                         else { }
-                        i++;
+                        i++; //counter that is used to limit the number of retries
                         
                     }
 
-
                 }
                 Console.WriteLine("Completed");
-                Console.Read();
-
              }
-
-
-
-
 
         }
         public static void ListItem(uint itemid,double metalprice, int keyprice, int budprice)
@@ -206,12 +198,10 @@ namespace HtmlAgilityPack
                     Console.Read();
                 }
 
-                catch
+                catch (Exception ex)
                 {
-                    Console.WriteLine("WTF?");
-
+                    Console.WriteLine("WTF?"+Environment.NewLine+ex);
                     return;
-
                 }
                 }
             }  
