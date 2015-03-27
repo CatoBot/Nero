@@ -24,8 +24,7 @@ namespace HtmlAgilityPack
 
                 driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");
 
-                bool done=false;
-                while(!done)
+                while(true)
                 {
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                     
@@ -46,10 +45,9 @@ namespace HtmlAgilityPack
 
                     refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
 
-                    bool done_1 = false;
                     int i = 0;
                                                            
-                    while(!done_1)
+                    while(true)
                     {
 
                         var submitbutton = driver.FindElement(By.Id("button_save"));
@@ -76,17 +74,16 @@ namespace HtmlAgilityPack
                             break;
                         }
 
-                        else if (i > 1 && !done_1)
+                        else if (i > 1)
                         {
                             Console.WriteLine("Cannot post after 3 retries"+Environment.NewLine+url);
-                            Console.Read(); //I should log this
+                            break; //I should log this
                         }
                         else 
                         {
                             i++; //counter that is used to limit the number of retries
                         }
-
-                        
+                     
                     }
 
                 }
