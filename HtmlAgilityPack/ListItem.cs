@@ -29,14 +29,20 @@ namespace HtmlAgilityPack
                 {
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                     
-                    int number_left = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist")).Count; //count the # of buttons to see if we're done yet
+                    var refreshbuttons = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
+                    int number_left = refreshbuttons.Count; //count the # of buttons to see if we're done yet
 
                     if (number_left == 0)
                     {
                         break;
                     }
 
-                    var refreshbutton = driver.FindElement(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
+                    int e = 0;
+                    while(!refreshbuttons[e].Enabled)
+                    {
+                        e++;
+                    }
+                    var refreshbutton = refreshbuttons[e];
 
                     refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
 
@@ -45,13 +51,13 @@ namespace HtmlAgilityPack
                                                            
                     while(!done_1)
                     {
-                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+
                         var submitbutton = driver.FindElement(By.Id("button_save"));
-                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+
                         bool enabled = submitbutton.Enabled; //check if button is operational. Attempting to click disabled buttons was causing invalid element state errors before
                         if(enabled)
                         {
-                            submitbutton.Click();
+                            submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
                         }
                         else 
                         {
@@ -62,7 +68,12 @@ namespace HtmlAgilityPack
                         string url = driver.Url;
                         if (url == "http://backpack.tf/classifieds/?steamid=76561198049414145")
                         {
-                            done_1 = true; //break out of inner relist loop to go to next item
+                            break; //break out of inner relist loop to go to next item
+                        }
+                        else if (url == "http://backpack.tf/profiles/76561198049414145")
+                        {
+                            driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");//weird case where it gets dropped in profile
+                            break;
                         }
 
                         else if (i > 1 && !done_1)
@@ -70,8 +81,11 @@ namespace HtmlAgilityPack
                             Console.WriteLine("Cannot post after 3 retries"+Environment.NewLine+url);
                             Console.Read(); //I should log this
                         }
-                        else { }
-                        i++; //counter that is used to limit the number of retries
+                        else 
+                        {
+                            i++; //counter that is used to limit the number of retries
+                        }
+
                         
                     }
 
