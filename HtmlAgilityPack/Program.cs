@@ -33,8 +33,19 @@ namespace TradeBot
         
         static void Main(string[] args)
         {
-            WebPost.ReListAll();
-            Console.Read();
+            bool end = false;
+            using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20)))
+            {
+                while(true)
+                {
+                    if(end)
+                    {
+                        break;
+                    }
+                }
+            }
+            
+            
             //this needs to be cleaner
             File.Delete("Classifieds.txt");
             File.Create("Classifieds.txt");
@@ -87,7 +98,11 @@ namespace TradeBot
             #endregion
 
         }
-
+        private static void RefreshListings(object state)
+        {
+            Console.WriteLine("hit");
+            WebPost.ReListAll();
+        }
         private static void UpdateClassifieds(object state)
         {
             var superwatch = Stopwatch.StartNew();
