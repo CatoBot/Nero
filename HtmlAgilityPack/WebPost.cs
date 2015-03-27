@@ -21,72 +21,119 @@ namespace HtmlAgilityPack
             options.AddArguments("user-data-dir=C:/Users/JLin/AppData/Local/Google/Chrome/User Data/Default");
             using (var driver = new ChromeDriver(options))
             {
+                HtmlWeb Htmlweb = new HtmlWeb();
 
-                driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");
+                HtmlDocument Htmldocument = Htmlweb.Load("http://backpack.tf/classifieds/?steamid=76561198049414145");
+                
+                IEnumerable<HtmlNode> links = Htmldocument.DocumentNode.Descendants("a") 
+                    .Where(x=>x.Attributes.Contains("href"))
+                    .Where(x => x.Attributes["href"].Value.Contains("page"))
+                    .Where(x => x.Attributes["href"].Value.Contains("classified"));
+                int _p=0;
+                if(links.Count()!=0)
+                {
+                    HtmlNode element = links.Last();
+                    string url = element.Attributes["href"].Value.ToString();
+                    string[] words = url.Split(new string[] { "page=" }, StringSplitOptions.None);
+                    if (int.TryParse(words[1], out _p))
+                    {
+                        _p = int.Parse(words[1]);
+                    }
+                }
+
+
+                int p = 1;
+
 
                 while(true)
                 {
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-                    
-                    var refreshbuttons = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
-                    int number_left = refreshbuttons.Count; //count the # of buttons to see if we're done yet
-
-                    if (number_left == 0)
+                    driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145&page=" + p);
+                    if (p == 1)
                     {
-                        break;
+                        Console.WriteLine("Please minimize, else it will get really annoying");
+                        Console.ReadLine();
                     }
 
-                    int e = 0;
-                    while(!refreshbuttons[e].Enabled)
+
+                    while (true)
                     {
-                        e++;
-                    }
-                    var refreshbutton = refreshbuttons[e];
-
-                    refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
-
-                    int i = 0;
-                                                           
-                    while(true)
-                    {
-
-                        var submitbutton = driver.FindElement(By.Id("button_save"));
-
-                        bool enabled = submitbutton.Enabled; //check if button is operational. Attempting to click disabled buttons was causing invalid element state errors before
-                        if(enabled)
+                        if (driver.Url == "http://backpack.tf/profiles/76561198049414145")
                         {
-                            submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
-                        }
-                        else 
+                            driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145&page="+p);//weird case where it gets dropped in profile
+                        }                        
+    
+                        var refreshbuttons = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
+                        int number_left = refreshbuttons.Count; //count the # of buttons to see if we're done yet
+
+                        if (number_left == 0)
                         {
-                            break; //I think if it's disabled, the action went through, not entirely sure though
-                        }
- 
-                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
-                        string url = driver.Url;
-                        if (url == "http://backpack.tf/classifieds/?steamid=76561198049414145")
-                        {
-                            break; //break out of inner relist loop to go to next item
-                        }
-                        else if (url == "http://backpack.tf/profiles/76561198049414145")
-                        {
-                            driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");//weird case where it gets dropped in profile
                             break;
                         }
 
-                        else if (i > 1)
+                        int e = 0;
+                        while (!refreshbuttons[e].Enabled)
                         {
-                            Console.WriteLine("Cannot post after 3 retries"+Environment.NewLine+url);
-                            break; //I should log this
+                            e++;
                         }
-                        else 
-                        {
-                            i++; //counter that is used to limit the number of retries
-                        }
-                     
-                    }
+                        var refreshbutton = refreshbuttons[e];
 
+                        refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
+
+                        int i = 0;
+
+                        while (true)
+                        {
+                            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                            var submitbutton = driver.FindElement(By.Id("button_save"));
+
+                            bool enabled = submitbutton.Enabled; //check if button is operational. Attempting to click disabled buttons was causing invalid element state errors before
+                            if (enabled)
+                            {
+                                submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
+                            }
+                            else
+                            {
+                                break; //I think if it's disabled, the action went through, not entirely sure though
+                            }
+
+                            string _url = driver.Url;
+                            if (_url == "http://backpack.tf/classifieds/?steamid=76561198049414145")
+                            {
+                                break; //break out of inner relist loop to go to next item
+                            }
+                            else if (_url == "http://backpack.tf/profiles/76561198049414145")
+                            {
+                                driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");//weird case where it gets dropped in profile
+                                break;
+                            }
+
+                            else if (i > 1)
+                            {
+                                Console.WriteLine("Cannot post after 3 retries" + Environment.NewLine + _url);
+                                break; //I should log this
+                            }
+                            else
+                            {
+                                i++; //counter that is used to limit the number of retries
+                            }
+
+                        }
+
+                    }
+                    p++;
+                    
+                    if (p>_p&&_p!=0)
+
+                    {
+                        break;
+                    }
+                    else if (_p==0)
+                    {
+                        break;
+                    }
+                    
                 }
+
                 Console.WriteLine("Completed");
              }
 

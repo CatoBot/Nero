@@ -46,7 +46,7 @@ namespace TradeBot
                     .Where(x => x.Attributes.Contains("data-listing-price")) //this is an attribute that an html node containing a price listing should have
                     .Where(x => !x.Attributes.Contains("data-gifted-id")) //no gifted items
                     .Where(x => !x.Attributes.Contains("data-paint-name")); //no painted items
-
+                
 
                 
                 foreach( HtmlNode element in links)

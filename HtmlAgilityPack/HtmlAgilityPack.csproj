@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StringParsing.cs" />
-    <Compile Include="ListItem.cs" />
+    <Compile Include="WebPost.cs" />
     <Compile Include="WebRetrieve.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

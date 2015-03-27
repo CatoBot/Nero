@@ -33,6 +33,7 @@ namespace TradeBot
         
         static void Main(string[] args)
         {
+            WebPost.ReListAll();
             bool end = false;
             using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20)))
             {
