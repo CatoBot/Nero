@@ -22,6 +22,7 @@ namespace TradeBot
 
     class Method
     {
+
         private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public static System.Timers.Timer myTimer = new System.Timers.Timer();
         public static List<string[]> Listings = new List<string[]>();
@@ -29,8 +30,11 @@ namespace TradeBot
         public static double reftokey = 17.33;
         public static double keytobud = 9.5;
         public static bool done = false;
+        
         static void Main(string[] args)
         {
+            WebPost.ReListAll();
+            Console.Read();
             //this needs to be cleaner
             File.Delete("Classifieds.txt");
             File.Create("Classifieds.txt");
@@ -121,7 +125,6 @@ namespace TradeBot
                         File.AppendAllText("Errors.txt", ex + Environment.NewLine); //in case something goes wrong
                     }
 
-
                 }
                 
             }
@@ -181,6 +184,5 @@ namespace TradeBot
             Console.Read();
             */
 
-        
     }
 }

@@ -7,12 +7,87 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using System.IO;
 using System.Windows.Forms;
+using OpenQA.Selenium.Support.UI;
 
 namespace HtmlAgilityPack
 {
-    class BpTfList
+    class WebPost
     {
 
+        public static void ReListAll()
+        {
+            ChromeOptions options = new ChromeOptions();
+
+            options.AddArguments("user-data-dir=C:/Users/JLin/AppData/Local/Google/Chrome/User Data/Default");
+            using (var driver = new ChromeDriver(options))
+            {
+
+                driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145");
+
+                bool done=false;
+                while(!done)
+                {
+                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                    
+                    int number_left = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist")).Count;
+
+                    if (number_left == 0)
+                    {
+                        break;
+                    }
+
+                    var refreshbutton = driver.FindElement(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
+
+                    refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
+
+                    bool done_1 = false;
+                    int i = 0;
+                                                           
+                    while(!done_1)
+                    {
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                        var submitbutton = driver.FindElement(By.Id("button_save"));
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                        bool enabled = submitbutton.Enabled;
+                        if(enabled)
+                        {
+                            submitbutton.Click();
+                        }
+                        else 
+                        {
+                            break;
+                        }
+ 
+
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                        string url = driver.Url;
+                        if (url == "http://backpack.tf/classifieds/?steamid=76561198049414145")
+                        {
+                            done_1 = true;
+                        }
+
+                        else if (i > 1 && !done_1)
+                        {
+                            Console.WriteLine("Cannot post after 3 retries");
+                            Console.Read();
+                        }
+                        else { }
+                        i++;
+                        
+                    }
+
+
+                }
+                Console.WriteLine("Completed");
+                Console.Read();
+
+             }
+
+
+
+
+
+        }
         public static void ListItem(uint itemid,double metalprice, int keyprice, int budprice)
         {
 
@@ -29,9 +104,9 @@ namespace HtmlAgilityPack
                 try
                 {
 
-                    bool done = false;
+                    bool done_1 = false;
                     int i = 0;
-                    while (!done)
+                    while (!done_1)
                     {
                         var metalfield = driver.FindElementById("metal");
                         var keyfield = driver.FindElementById("keys");
@@ -48,13 +123,13 @@ namespace HtmlAgilityPack
                         
                         if(driver.Url!="http://backpack.tf/classifieds/?steamid=76561198049414145")
                         {
-                            done = false;
+                            done_1 = false;
                         }
                         else
                         {
-                            done = true;
+                            done_1 = true;
                         }
-                        if (i > 1 && !done)
+                        if (i > 1 && !done_1)
                         {
                             Console.WriteLine("Cannot post after 3 retries");
                             Console.Read();
