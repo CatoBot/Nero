@@ -36,38 +36,30 @@ namespace HtmlAgilityPack
                         string mainhandle = driver.CurrentWindowHandle;
                         foreach (IWebElement button in refreshbuttons)
                         {
-
-                            string newhandle;
-                                
-                           
+                   
                             button.SendKeys(OpenQA.Selenium.Keys.Control + OpenQA.Selenium.Keys.Shift + OpenQA.Selenium.Keys.Enter);
 
                             List<string> handles = driver.WindowHandles.ToList();
 
-                            for (int i = 0; i < handles.Count(); i++ )
-                            {
-                                if (handles[i] == mainhandle)
-                                {
-                                    handles.RemoveAt(i);
-                                }
-                            }
-                            newhandle = handles[0];
-
+                            string newhandle = handles[1];
                             driver.SwitchTo().Window(newhandle);
 
                             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                            
                             var submitbutton = driver.FindElement(By.Id("button_save"));
                             submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
+                            
                             driver.Close();
                             driver.SwitchTo().Window(mainhandle);
-
                         }
+                        page++;
                     }
-                    page++;
+                    
                 }
                 Console.WriteLine("Completed");
             }
         }
+        
         public static void ReListAll_Old()//I can probably remove some of these implicit waits without problem
         {
             ChromeOptions options = new ChromeOptions();

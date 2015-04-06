@@ -25,7 +25,7 @@ namespace TradeBot
         public static List<string[]> Listings = new List<string[]>();
         public static int q = 0;
         public static double reftokey = 17.33;
-        public static double keytobud = 9.5;
+        public static double keytobud = 9.5; //lel
         public static bool done = false;
         
         static void Main(string[] args)
