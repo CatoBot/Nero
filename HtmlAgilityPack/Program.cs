@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using log4net;
 using System.Reflection;
 using System.IO;
 using HtmlAgilityPack;
-using System.Text.RegularExpressions;
-using System.Globalization;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,19 +31,20 @@ namespace TradeBot
         static void Main(string[] args)
         {
             WebPost.ReListAll();
-            bool end = false;
+            
             using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20)))
             {
                 while(true)
                 {
+                    bool end = false;
                     if(end)
                     {
                         break;
                     }
                 }
             }
-            
-            
+
+            Console.Read();
             //this needs to be cleaner
             File.Delete("Classifieds.txt");
             File.Create("Classifieds.txt");
@@ -124,11 +122,12 @@ namespace TradeBot
                         double dubcacheprice; //dub refers to it beign double
 
                         object objcacheprice = MemoryCache.Default.Get(element[0]);//recall from cache
-                        Console.WriteLine(objcacheprice.ToString());
+                        string s = objcacheprice.ToString();
+                        Console.WriteLine(s);
 
                         listprice = StringParsing.StringToDouble(element[1]);//parse the prie string, element[1] (since element is a string array w/ price, name, tradelink, etc)
                         dubcacheprice = double.Parse(objcacheprice.ToString());
-                        Console.WriteLine(listprice.ToString());
+                        Console.WriteLine(s);
                         
                         if(listprice < dubcacheprice)
                         {

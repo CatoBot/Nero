@@ -13,8 +13,62 @@ namespace HtmlAgilityPack
 {
     class WebPost
     {
+        public static void ReListAll()
+        {
+            ChromeOptions options = new ChromeOptions();
 
-        public static void ReListAll()//I can probably remove some of these implicit waits without problem
+            options.AddArguments("user-data-dir=C:/Users/JLin/AppData/Local/Google/Chrome/User Data/Default");
+            using (var driver = new ChromeDriver(options))
+            {
+                int page = 1;
+                bool done = false;
+                while (!done)
+                {
+                    
+                    driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145&page=" + page);
+                    var refreshbuttons = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
+                    if (refreshbuttons.Count==0)
+                    {
+                        done = true;
+                    }
+                    else
+                    {
+                        string mainhandle = driver.CurrentWindowHandle;
+                        foreach (IWebElement button in refreshbuttons)
+                        {
+
+                            string newhandle;
+                                
+                           
+                            button.SendKeys(OpenQA.Selenium.Keys.Control + OpenQA.Selenium.Keys.Shift + OpenQA.Selenium.Keys.Enter);
+
+                            List<string> handles = driver.WindowHandles.ToList();
+
+                            for (int i = 0; i < handles.Count(); i++ )
+                            {
+                                if (handles[i] == mainhandle)
+                                {
+                                    handles.RemoveAt(i);
+                                }
+                            }
+                            newhandle = handles[0];
+
+                            driver.SwitchTo().Window(newhandle);
+
+                            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                            var submitbutton = driver.FindElement(By.Id("button_save"));
+                            submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
+                            driver.Close();
+                            driver.SwitchTo().Window(mainhandle);
+
+                        }
+                    }
+                    page++;
+                }
+                Console.WriteLine("Completed");
+            }
+        }
+        public static void ReListAll_Old()//I can probably remove some of these implicit waits without problem
         {
             ChromeOptions options = new ChromeOptions();
 
@@ -51,7 +105,7 @@ namespace HtmlAgilityPack
                     if (p == 1)
                     {
                         Console.WriteLine("Please minimize, else it will get really annoying");
-                        Console.ReadLine();
+                        //Console.ReadLine();
                     }
 
 
@@ -77,14 +131,29 @@ namespace HtmlAgilityPack
                         }
                         var refreshbutton = refreshbuttons[e];
 
-                        refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
+                        int q = 0;
+                        do
+                        {
+                            refreshbutton.SendKeys(OpenQA.Selenium.Keys.Return);
+                            if (q > 2)
+                            {
+                                break;
+                            }
+                            q++;
+                            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                        } while (!driver.Url.Contains("http://backpack.tf/classifieds/add/"));
+
 
                         int i = 0;
 
                         while (true)
                         {
                             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+
+
+                            
                             var submitbutton = driver.FindElement(By.Id("button_save"));
+
 
                             bool enabled = submitbutton.Enabled; //check if button is operational. Attempting to click disabled buttons was causing invalid element state errors before
                             if (enabled)
