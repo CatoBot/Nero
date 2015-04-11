@@ -30,6 +30,8 @@ namespace TradeBot
         
         static void Main(string[] args)
         {
+            string time = DateTime.Now.ToString("h:mm:ss tt");
+            Console.WriteLine(time+"---hit");
             WebPost.ReListAll();
             
             using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20)))
@@ -43,7 +45,8 @@ namespace TradeBot
                     }
                 }
             }
-
+            /*
+           
             Console.Read();
             //this needs to be cleaner
             File.Delete("Classifieds.txt");
@@ -95,13 +98,17 @@ namespace TradeBot
                 }
             );
             #endregion
-
+            
+            */
         }
+        
         private static void RefreshListings(object state)
         {
-            Console.WriteLine("hit");
+            
+            Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt")+"---hit");
             WebPost.ReListAll();
         }
+        /*
         private static void UpdateClassifieds(object state)
         {
             var superwatch = Stopwatch.StartNew();

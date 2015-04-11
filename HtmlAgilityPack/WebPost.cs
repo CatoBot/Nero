@@ -8,6 +8,8 @@ using OpenQA.Selenium.Support;
 using System.IO;
 using System.Windows.Forms;
 using OpenQA.Selenium.Support.UI;
+using System.Drawing;
+
 
 namespace HtmlAgilityPack
 {
@@ -20,7 +22,10 @@ namespace HtmlAgilityPack
             options.AddArguments("user-data-dir=C:/Users/JLin/AppData/Local/Google/Chrome/User Data/Default");
             using (var driver = new ChromeDriver(options))
             {
+                
+                driver.Manage().Window.Position = new Point(0, -2000);
                 int page = 1;
+                int q = 0;
                 bool done = false;
                 while (!done)
                 {
@@ -33,6 +38,7 @@ namespace HtmlAgilityPack
                     }
                     else
                     {
+                        
                         string mainhandle = driver.CurrentWindowHandle;
                         foreach (IWebElement button in refreshbuttons)
                         {
@@ -46,9 +52,19 @@ namespace HtmlAgilityPack
 
                             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                             
-                            var submitbutton = driver.FindElement(By.Id("button_save"));
-                            submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
-                            
+                            try
+                            {
+                                var submitbutton = driver.FindElement(By.Id("button_save"));
+                                submitbutton.SendKeys(OpenQA.Selenium.Keys.Enter);
+                            }
+                            catch 
+                            {
+                                Console.WriteLine("cannot find/click button");
+                                Screenshot screenshot = driver.GetScreenshot();
+                                screenshot.SaveAsFile("d:\\ScreenShot"+q+".png", System.Drawing.Imaging.ImageFormat.Png);
+                                q++;
+                            }
+               
                             driver.Close();
                             driver.SwitchTo().Window(mainhandle);
                         }
