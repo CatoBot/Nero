@@ -24,31 +24,20 @@ namespace TradeBot
         public static System.Timers.Timer myTimer = new System.Timers.Timer();
         public static List<string[]> Listings = new List<string[]>();
         public static int q = 0;
-        public static double reftokey = 17.33;
-        public static double keytobud = 9.5; //lel
+        public static double reftokey = 20;
+        public static double keytobud = 6; //lel
         public static bool done = false;
         
         static void Main(string[] args)
-        {
+        {           
             string time = DateTime.Now.ToString("h:mm:ss tt");
-            Console.WriteLine(time+"---hit");
-            WebPost.ReListAll();
+            Console.WriteLine(time + "---hit");
             
-            using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20)))
-            {
-                while(true)
-                {
-                    bool end = false;
-                    if(end)
-                    {
-                        break;
-                    }
-                }
-            }
-            /*
-           
-            Console.Read();
             //this needs to be cleaner
+            File.Delete("Prices.txt");
+            File.Create("Prices.txt");
+            File.Delete("ItemList.txt");
+            File.Create("ItemList.txt");
             File.Delete("Classifieds.txt");
             File.Create("Classifieds.txt");
             File.Delete("Null_Average.txt");
@@ -58,12 +47,16 @@ namespace TradeBot
             File.AppendAllText("Matches.txt", Environment.NewLine);
             File.AppendAllText("Errors.txt", Environment.NewLine);
             
+            //WebPost.ReListAll();
+            
+            
             var superwatch = Stopwatch.StartNew();
             
-            WebRetrieve.GetAllPrices(); //update cache first before running
+            WebRetrieve.GetAllPrices(); //update cache first before running; also creates an itemlist file so that we don't have to keep filtering through items
             
             var superelapsedMs = superwatch.ElapsedMilliseconds;
             Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
+
             
             //running two separate threads
             #region ParallelTasks
@@ -75,7 +68,6 @@ namespace TradeBot
                         {
                             if (done) //later I can implement logic with done to shut off the program if I want
                             {
-
                                 break;
                             }
                         }
@@ -84,22 +76,36 @@ namespace TradeBot
 
                 () =>
                 {
-                    using (new Timer(GetAllPrices, null, TimeSpan.FromMinutes(20), TimeSpan.FromMinutes(20))) //calls upon getallprices every 20 min to update cache
+                    using (new Timer(GetAllPricesByFile, null, TimeSpan.FromMinutes(29), TimeSpan.FromMinutes(29))) //calls upon getallprices every 20 min to update cache
                     {
                         while (true)
                         {
                             if (done)
                             {
-
+                                break;
+                            }
+                        }
+                    }
+                },
+                () =>
+                {
+                    using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(40), TimeSpan.FromMinutes(40)))
+                    {
+                        while (true)
+                        {                            
+                            if (done)
+                            {
                                 break;
                             }
                         }
                     }
                 }
+                
+           
             );
             #endregion
             
-            */
+            
         }
         
         private static void RefreshListings(object state)
@@ -108,7 +114,7 @@ namespace TradeBot
             Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt")+"---hit");
             WebPost.ReListAll();
         }
-        /*
+        
         private static void UpdateClassifieds(object state)
         {
             var superwatch = Stopwatch.StartNew();
@@ -123,12 +129,11 @@ namespace TradeBot
                 {
                     Listings.Add(element);
                     try
-                    {
-                      
+                    {                      
                         double listprice;
                         double dubcacheprice; //dub refers to it beign double
 
-                        object objcacheprice = MemoryCache.Default.Get(element[0]);//recall from cache
+                        object objcacheprice = MemoryCache.Default.Get(element[0]+" "+element[1]);//recall from cache
                         string s = objcacheprice.ToString();
                         Console.WriteLine(s);
 
@@ -136,7 +141,7 @@ namespace TradeBot
                         dubcacheprice = double.Parse(objcacheprice.ToString());
                         Console.WriteLine(s);
                         
-                        if(listprice < dubcacheprice)
+                        if(listprice + 20 < dubcacheprice)
                         {
                             q++; //just a counter
                             File.AppendAllText("Matches.txt", element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + Environment.NewLine); //record
@@ -150,7 +155,7 @@ namespace TradeBot
                 }
                 
             }
-            while (Listings.Count > 20)
+            while (Listings.Count > 40)
             {
                 Listings.RemoveAt(0); //trim list to 20; the maximimum number of listings/page is 20, anyway
             } 
@@ -160,17 +165,9 @@ namespace TradeBot
       
         }
 
-        private static void GetAllPrices(object state)
+        private static void GetAllPricesByFile(object state)
         {
-            List<string> itemlist = new List<string>();
-
-            itemlist = WebRetrieve.GetItems(); //get all items the bot targets
-
-            foreach (string element in itemlist)
-            {
-                WebRetrieve.GetItemPrice(element, 3, 1, 6, true);//find price for each item/set cache entries for each
-
-            }
+            WebRetrieve.GetAllPricesByFile();
             File.AppendAllText("Matches.txt", "Cache Updated" + Environment.NewLine); //so I know if this is actually working every 20 min
         }
 

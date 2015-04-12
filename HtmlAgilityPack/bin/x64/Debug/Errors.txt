@@ -1,2 +1,756 @@
 System.NullReferenceException: Object reference not set to an instance of an object.
    at HtmlAgilityPack.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 102
+
+
+
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 134
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 137
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 137
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 137
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 137
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TradeBot.Method.UpdateClassifieds(Object state) in c:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\Program.cs:line 137
+
+
+
+
+
+
+
+
+

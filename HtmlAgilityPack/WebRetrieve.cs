@@ -23,12 +23,22 @@ namespace TradeBot
 
             itemlist = WebRetrieve.GetItems(); //this method is described below
 
-            foreach (string element in itemlist)
+            for (int i = 0; i < itemlist.Count() - 2;i+=3 )
             {
-                WebRetrieve.GetItemPrice(element, 3, 1, 6, true); //also below
+                WebRetrieve.GetItemPrice(itemlist[i], 3, 1, int.Parse(itemlist[i+1]),int.Parse(itemlist[i+2]), true); //also below
+            }
+
+
+        }
+        public static void GetAllPricesByFile()
+        {
+            List<string> itemlist = new List<string>();
+            itemlist = File.ReadAllLines("ItemList.Txt").ToList();
+            for (int i = 0; i < itemlist.Count() - 2; i += 3)
+            {
+                WebRetrieve.GetItemPrice(itemlist[i], 3, 1, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), true); //also below
             }
         }
-
         public static List<string[]> GetClassifieds() //returns pertinent information about the most recent classifieds listed on backpack.tf. returns a list of string arrays (each string array pertains to one listing)
         {
             List<string[]> classifieds = new List<string[]>(); //this list will be filled with information
@@ -39,37 +49,33 @@ namespace TradeBot
             try //try clause. the code will break from the try clause and move to the catch clause if there's a problem executing the code
             {
                 HtmlWeb Htmlweb = new HtmlWeb();
-                
-                HtmlDocument Htmldocument = Htmlweb.Load("http://backpack.tf/classifieds/?tradable=1&craftable=1&australium=-1&slot=misc&quality=6&sort=bump"); //this page is bp.tf's classified's page, sorted by bump time/filtered for unique cosmetics
+
+                HtmlDocument Htmldocument = Htmlweb.Load("http://backpack.tf/classifieds/?tradable=1&craftable=1&australium=-1&quality=11,6&killstreak_tier=0&sort=bump"); //this page is bp.tf's classified's page, sorted by bump time/filtered for unique cosmetics
 
                 IEnumerable<HtmlNode> links = Htmldocument.DocumentNode.Descendants("li") //this is a tag that I observed preceded all the html nodes that contain price listings
                     .Where(x => x.Attributes.Contains("data-listing-price")) //this is an attribute that an html node containing a price listing should have
-                    .Where(x => !x.Attributes.Contains("data-gifted-id")) //no gifted items
-                    .Where(x => !x.Attributes.Contains("data-paint-name")); //no painted items
-                
-
+                    .Where(x => !x.Attributes.Contains("data-gifted-id")); //no gifted items
                 
                 foreach( HtmlNode element in links)
                 {
-
                     string name = element.Attributes["data-name"].Value; //item name
+                    string quality = element.Attributes["data-quality"].Value;
                     string price = element.Attributes["data-listing-price"].Value; //item price, in string format, "x ref, y keys, z, buds"; it's just how the website formats it
                     string addlink = element.Attributes["data-listing-steamid"].Value; //the lister's steamid number
                     string tradelink = ""; //the lister's trade offer link (not always provided)
+                    
 
                     if (element.Attributes.Contains("data-listing-offers-url"))
                     {
                         tradelink = element.Attributes["data-listing-offers-url"].Value;
                     }
                     
-                    string[] info = new string[4] {name, price, addlink, tradelink};
+                    string[] info = new string[5] {name, quality, price, addlink, tradelink};
                     
                     if(!classifieds.Any(info.SequenceEqual))
                     {
                         classifieds.Add(info);
                     }
-
-
                 }
                 /* //ignore this stuff
                 foreach (string[] element in classifieds)
@@ -107,30 +113,48 @@ namespace TradeBot
                             .Descendants("tr")
                             .Select(n => n.Elements("td").Select(e => e.InnerText).ToArray()); //stumbled upon this solution on stackoverflow, not sure if there's a more efficient way. basically, the spreadheet is in table format, and these td and td tags delineate rows/columns
 
-                foreach (var tr in table)
+                foreach (string[] tr in table.Skip(1))
                 {
-
-                    if(tr.Contains("Cosmetic")||tr.Contains("Taunt")) //interested in only cosmetics/taunts. the table data includes a column that states the type of item, eg "taunt", "tool", etc
+                    if(tr[0].Contains("Non-Craftable")||tr[0].Contains("Non-Tradable")||(tr[4]==""&&tr[5]==""))
                     {
-                        for (int i = 0; i < tr.Count() - 1; i++) //go through each cell per row
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine(tr[0]);
+                        if(tr[1].Contains("Tool"))
                         {
-
-                            if (tr[i] == "" || tr[i].Contains("key") || tr[i].Contains("ref") || tr[i].Contains("bud") || tr[i].Contains("Cosmetic") || tr[i].Contains("Taunt"))
+                            if (tr[4] != "")
                             {
-                                //filter out all the non-name entries in the table
+
+                                targetitems.Add(tr[0]);
+                                targetitems.Add("6");
+                                targetitems.Add("1");
                             }
-
-                            else if (i == 4 && tr[4] == "" || tr[i].ToString().Contains("Non-Craftable") || tr[i].ToString().Contains("Non-Tradable"))
+                            if(tr[5]!="")
                             {
-                                break; //column 4 is where the price for unique items go. if it's empty, skip, go to the next row. not entirely sure if this works
-                            }
-
-                            else
-                            {
-                                Console.WriteLine(tr[i].ToString()); //for debugging purposes
-                                targetitems.Add(tr[i]); //add all the name values to the list
+                                targetitems.Add(tr[0]);
+                                targetitems.Add("11");
+                                targetitems.Add("1");
                             }
                         }
+                        else
+                        {
+                            if (tr[4] != "")
+                            {
+
+                                targetitems.Add(tr[0]);
+                                targetitems.Add("6");
+                                targetitems.Add("0");
+                            }
+                            if (tr[5] != "")
+                            {
+                                targetitems.Add(tr[0]);
+                                targetitems.Add("11");
+                                targetitems.Add("0");
+                            }
+                        }
+
                     }
                 }
                 Console.WriteLine("done!"); //absolutely necessary
@@ -156,7 +180,7 @@ namespace TradeBot
         //vintage: 3
         
         
-        public static void GetItemPrice(string name, int z, int craftable, int quality, bool omit)
+        public static void GetItemPrice(string name, int z, int craftable, int quality, int tool, bool omit)
         {
             var absoluteExpirationPolicy = new CacheItemPolicy{AbsoluteExpiration = DateTime.Now.AddMinutes(30)}; //this is a policy that forces cache entries to expire after 30 min
         
@@ -188,26 +212,39 @@ namespace TradeBot
                     //then, filter our gifted items, painted items. make sure there is a steamid so the bot can contact the guy if it must
                     //NOTE: BP.tf automatically orders listings lowest to highest. the parser reads top down, so when I create the node list, the nodes with the cheap prices will be before the nodes with the expensive prices
 
-                    IEnumerable<HtmlNode> links = htmlDocument.DocumentNode.Descendants("li")
-                        .Where(x => x.Attributes.Contains("data-listing-price"))
-                        .Where(x => !x.Attributes.Contains("data-gifted-id"))
-                        .Where(x => x.Attributes.Contains("data-listing-steamid"))
-                        .Where(x => !x.Attributes.Contains("data-paint-name"));
-                    
+                    IEnumerable<HtmlNode> links;
+                    if (tool==0)
+                    {
+                        links = htmlDocument.DocumentNode.Descendants("li")
+                            .Where(x => x.Attributes.Contains("data-listing-price"))
+                            .Where(x => !x.Attributes.Contains("data-gifted-id"))
+                            .Where(x => x.Attributes.Contains("data-listing-steamid"))
+                            .Where(x => !x.Attributes.Contains("data-paint-name"))
+                            .Where(x => !x.Attributes["title"].Value.Contains("#"));
+                    }
+                    else
+                    {
+                        links = htmlDocument.DocumentNode.Descendants("li")
+                            .Where(x => x.Attributes.Contains("data-listing-price"))
+                            .Where(x => !x.Attributes.Contains("data-gifted-id"))
+                            .Where(x => x.Attributes.Contains("data-listing-steamid"))
+                            .Where(x => !x.Attributes["title"].Value.Contains("#"));
+                    }
+
+
                     //this just gets every listing (will be used later; I call them "unfiltered listings")
                     IEnumerable<HtmlNode> ulinks = htmlDocument.DocumentNode.Descendants("li")
                         .Where(x => x.Attributes.Contains("data-listing-price"))
                         .Where(x => x.Attributes.Contains("data-listing-steamid"));
 
-
-
                     //Now, Dumping list of prices to a string array
-                    string[] prices = links.Select(x => x.Attributes["data-listing-price"].Value).ToArray();
+                    List<string> prices = links.Select(x => x.Attributes["data-listing-price"].Value).ToList();
 
                     string[] uprices = ulinks.Select(x => x.Attributes["data-listing-price"].Value).ToArray();
-                    
+
+
                     //if the page we're on has no listings at all (aka no unfiltered listings), break, cause there are no more listings to inspect
-                    if (uprices.Count()==0)
+                    if (uprices.Count() == 0)
                     {
                         File.AppendAllText("Page_Overload.txt", name + Environment.NewLine); //Page_Overload is just a debugging file
                         break;
@@ -268,15 +305,20 @@ namespace TradeBot
                         else
                         {
                             string price = name + " : " + Average;
-                            //File.AppendAllText("Prices.txt", price + Environment.NewLine);
+                            File.AppendAllText("Prices.txt", price + Environment.NewLine);
                             //implement the above line if you want a file with the price for each item the bot goes through
+
+                            if(Average>=30)
+                            {
+                                File.AppendAllText("ItemList.txt", name+ Environment.NewLine+quality+Environment.NewLine+tool+Environment.NewLine);
+                            }
                         }
                         
                         //add the price to cache
 
                         lock(ThisLock) //this is to prevent the cache from being accessed as it's being written; not sure if it actually works
                         {
-                             MemoryCache.Default.Set(name, Average, absoluteExpirationPolicy);
+                             MemoryCache.Default.Set(name+" "+quality.ToString(), Average, absoluteExpirationPolicy);
                         }                  
 
                         Console.WriteLine("All Done!"); //this is completely necessary
