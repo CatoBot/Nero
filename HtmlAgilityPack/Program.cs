@@ -24,16 +24,20 @@ namespace TradeBot
         public static System.Timers.Timer myTimer = new System.Timers.Timer();
         public static List<string[]> Listings = new List<string[]>();
         public static int q = 0;
-        public static double reftokey = 20;
-        public static double keytobud = 6; //lel
+        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 3, 1, 6, 0, true);
+        public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 3, 1, 6, 0, true);
         public static bool done = false;
+        public static readonly ReaderWriterLockSlim cachelock = new ReaderWriterLockSlim();
         
         static void Main(string[] args)
         {           
+
             string time = DateTime.Now.ToString("h:mm:ss tt");
             Console.WriteLine(time + "---hit");
             
             //this needs to be cleaner
+            File.Delete("Mismatches.txt");
+            File.Create("Mismatches.txt");
             File.Delete("Prices.txt");
             File.Create("Prices.txt");
             File.Delete("ItemList.txt");
@@ -47,7 +51,7 @@ namespace TradeBot
             File.AppendAllText("Matches.txt", Environment.NewLine);
             File.AppendAllText("Errors.txt", Environment.NewLine);
             
-            //WebPost.ReListAll();
+            WebPost.ReListAll();
             
             
             var superwatch = Stopwatch.StartNew();
@@ -132,23 +136,36 @@ namespace TradeBot
                     {                      
                         double listprice;
                         double dubcacheprice; //dub refers to it beign double
-
-                        object objcacheprice = MemoryCache.Default.Get(element[0]+" "+element[1]);//recall from cache
-                        string s = objcacheprice.ToString();
-                        Console.WriteLine(s);
-
-                        listprice = StringParsing.StringToDouble(element[1]);//parse the prie string, element[1] (since element is a string array w/ price, name, tradelink, etc)
-                        dubcacheprice = double.Parse(objcacheprice.ToString());
-                        Console.WriteLine(s);
                         
-                        if(listprice + 20 < dubcacheprice)
+                        if ( MemoryCache.Default.Contains(element[0].ToString()+" "+element[1].ToString()))
                         {
-                            q++; //just a counter
-                            File.AppendAllText("Matches.txt", element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + Environment.NewLine); //record
+                            cachelock.EnterReadLock();
+                            object objcacheprice = MemoryCache.Default.Get(element[0].ToString()+" "+element[1].ToString());//recall from cache
+                            cachelock.ExitReadLock();
+                            
+                            string s = objcacheprice.ToString();
+                            listprice = StringParsing.StringToDouble(element[2]);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
+                            
+                            dubcacheprice = double.Parse(objcacheprice.ToString());
+                            Console.WriteLine("cache: " + dubcacheprice);
+                            Console.WriteLine("list: "+listprice);
+                        
+                            if(listprice + reftokey < dubcacheprice)
+                            {
+                                q++; //just a counter
+                                File.AppendAllText("Matches.txt", element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + Environment.NewLine); //record
+                            }
                         }
+                        else
+                        {
+                            File.AppendAllText("Mismatches.txt",element[0].ToString()+" "+element[1].ToString()+Environment.NewLine);
+                        }
+
+
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine("Error " + ex);
                         File.AppendAllText("Errors.txt", ex + Environment.NewLine); //in case something goes wrong
                     }
 
