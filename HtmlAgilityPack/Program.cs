@@ -28,14 +28,14 @@ namespace TradeBot
         public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 0, true);
         public static bool done = false;
         public static readonly ReaderWriterLockSlim cachelock = new ReaderWriterLockSlim();
-        public static int o = 0;
+        public static int o = 1;
         public static bool recalc = false;
         
         static void Main(string[] args)
         {
 
-            bool done = false;
-            while (!done)
+            bool verified = false;
+            while (!verified)
             {
                 try
                 {
@@ -45,7 +45,7 @@ namespace TradeBot
                     Notifications.epass = Console.ReadLine();
                     Notifications.sendmail("test");
                     Console.WriteLine("verified");
-                    done = true;
+                    verified = true;
                 }
                 catch
                 {
@@ -200,6 +200,7 @@ namespace TradeBot
                     {
                         Console.WriteLine("Error " + ex);
                         File.AppendAllText("Errors.txt", ex + Environment.NewLine); //in case something goes wrong
+                        Console.ReadLine();
                     }
 
                 }
