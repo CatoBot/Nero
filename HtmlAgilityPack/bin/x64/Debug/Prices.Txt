@@ -1,19 +1,27 @@
-A Brush with Death : 2.96
-A Color Similar to Slate : 7
-A Deep Commitment to Purple : 8.83
-A Distinctive Lack of Hue : 36.8733333333333
-A Mann's Mint : 17.88
-A Rather Festive Tree : 1.66
-A Whiff of the Old Brimstone : 1.66
-AWPer Hand : 3
-After Dark : 1.66
-After Eight : 16.9933333333333
-Aged Moustache Grey : 7.77666666666667
-Air Raider : 1.88666666666667
-Air Strike : 0.05
-Air Strike : 1.84333333333333
-Aladdin's Private Reserve : 1.66
-Ali Baba's Wee Booties : 0.05
+A Color Similar to Slate : 8
+A Deep Commitment to Purple : 9.11
+A Distinctive Lack of Hue : 39.2716666666667
+A Mann's Mint : 17.8025
+AWPer Hand : 2.92
+AWPer Hand : 249.235
+After Eight : 21.4691666666667
+Aged Moustache Grey : 7.66333333333333
 Alien Cranium : 4
-Alien Swarm Parasite : 1.22
-All-Father : 9
+All-Father : 9.18333333333333
+All-Father : 89.0125
+Ambassador : 8
+Amputator : 2.33
+An Air of Debonair : 20.5758333333333
+An Extraordinary Abundance of Tinge : 39.825
+Angel of Death : 3.66
+Anger : 4.58666666666667
+Anger : 28.4691666666667
+Antarctic Parka : 10
+Antarctic Researcher : 6.77333333333333
+Antlers : 4
+Ap-Sap : 12.22
+Apoco-Fists : 2.51333333333333
+Apoco-Fists : 2.92
+Apparition's Aspect : 6.36666666666667
+Apparition's Aspect : 22.4691666666667
+Aqua Flops : 3.33

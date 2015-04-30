@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Notifications.cs" />
     <Compile Include="StringParsing.cs" />
     <Compile Include="WebPost.cs" />
     <Compile Include="WebRetrieve.cs" />

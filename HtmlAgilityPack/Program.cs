@@ -24,13 +24,35 @@ namespace TradeBot
         public static System.Timers.Timer myTimer = new System.Timers.Timer();
         public static List<string[]> Listings = new List<string[]>();
         public static int q = 0;
-        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 3, 1, 6, 0, true);
-        public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 3, 1, 6, 0, true);
+        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 4, 1, 6, 0, true);
+        public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 0, true);
         public static bool done = false;
         public static readonly ReaderWriterLockSlim cachelock = new ReaderWriterLockSlim();
+        public static int o = 0;
+        public static bool recalc = false;
         
         static void Main(string[] args)
-        {           
+        {
+
+            bool done = false;
+            while (!done)
+            {
+                try
+                {
+                    Console.WriteLine("email username");
+                    Notifications.euser = Console.ReadLine();
+                    Console.WriteLine("email password");
+                    Notifications.epass = Console.ReadLine();
+                    Notifications.sendmail("test");
+                    Console.WriteLine("verified");
+                    done = true;
+                }
+                catch
+                {
+                    Console.WriteLine("Incorrect Credentials");
+                }
+            }
+
 
             string time = DateTime.Now.ToString("h:mm:ss tt");
             Console.WriteLine(time + "---hit");
@@ -38,10 +60,9 @@ namespace TradeBot
             //this needs to be cleaner
             File.Delete("Mismatches.txt");
             File.Create("Mismatches.txt");
-            File.Delete("Prices.txt");
-            File.Create("Prices.txt");
-            File.Delete("ItemList.txt");
-            File.Create("ItemList.txt");
+
+            File.Delete("TimeLog.txt");
+            File.Create("TimeLog.txt");
             File.Delete("Classifieds.txt");
             File.Create("Classifieds.txt");
             File.Delete("Null_Average.txt");
@@ -50,9 +71,19 @@ namespace TradeBot
             File.Create("Page_Overload.txt");
             File.AppendAllText("Matches.txt", Environment.NewLine);
             File.AppendAllText("Errors.txt", Environment.NewLine);
-            
+         /*   
             WebPost.ReListAll();
-            
+            using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(40), TimeSpan.FromMinutes(40)))
+            {
+                while (true)
+                {
+                    if (done)
+                    {
+                        break;
+                    }
+                }
+            }
+            */
             
             var superwatch = Stopwatch.StartNew();
             
@@ -61,7 +92,7 @@ namespace TradeBot
             var superelapsedMs = superwatch.ElapsedMilliseconds;
             Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
 
-            
+        
             //running two separate threads
             #region ParallelTasks
             Parallel.Invoke(() =>
@@ -80,7 +111,7 @@ namespace TradeBot
 
                 () =>
                 {
-                    using (new Timer(GetAllPricesByFile, null, TimeSpan.FromMinutes(29), TimeSpan.FromMinutes(29))) //calls upon getallprices every 20 min to update cache
+                    using (new Timer(GetAllPrices, null, TimeSpan.FromMinutes(29), TimeSpan.FromMinutes(29))) //calls upon getallprices every 20 min to update cache
                     {
                         while (true)
                         {
@@ -113,9 +144,9 @@ namespace TradeBot
         }
         
         private static void RefreshListings(object state)
-        {
-            
-            Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt")+"---hit");
+        {     
+            //Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt")+"---hit");
+            File.AppendAllText("Matches.txt", DateTime.Now.ToString("h:mm:ss tt") + " Classifieds Relisted" + Environment.NewLine);
             WebPost.ReListAll();
         }
         
@@ -123,7 +154,7 @@ namespace TradeBot
         {
             var superwatch = Stopwatch.StartNew();
             Console.WriteLine("hit" + Environment.NewLine);//debugging purposes
-            
+            File.AppendAllText("TimeLog.txt", DateTime.Now.ToString("h:mm:ss tt") + Environment.NewLine);
             List<string[]> newlistings = WebRetrieve.GetClassifieds();
 
             foreach (string[] element in newlistings)
@@ -137,23 +168,25 @@ namespace TradeBot
                         double listprice;
                         double dubcacheprice; //dub refers to it beign double
                         
-                        if ( MemoryCache.Default.Contains(element[0].ToString()+" "+element[1].ToString()))
+                        if ( MemoryCache.Default.Contains(element[0]+" "+element[1]+" "+element[2]))
                         {
                             cachelock.EnterReadLock();
-                            object objcacheprice = MemoryCache.Default.Get(element[0].ToString()+" "+element[1].ToString());//recall from cache
+                            object objcacheprice = MemoryCache.Default.Get(element[0]+" "+element[1]+" "+element[2]);//recall from cache
                             cachelock.ExitReadLock();
                             
                             string s = objcacheprice.ToString();
-                            listprice = StringParsing.StringToDouble(element[2]);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
+                            listprice = StringParsing.StringToDouble(element[3]);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
                             
                             dubcacheprice = double.Parse(objcacheprice.ToString());
-                            Console.WriteLine("cache: " + dubcacheprice);
-                            Console.WriteLine("list: "+listprice);
+                            //Console.WriteLine("cache: " + dubcacheprice);
+                            //Console.WriteLine("list: "+listprice);
                         
                             if(listprice + reftokey < dubcacheprice)
                             {
                                 q++; //just a counter
-                                File.AppendAllText("Matches.txt", element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + Environment.NewLine); //record
+                                string text = element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + " : " + element[4] + " : " + element[5];
+                                File.AppendAllText("Matches.txt", text+Environment.NewLine); //record
+                                Notifications.sendmail(text);
                             }
                         }
                         else
@@ -178,14 +211,30 @@ namespace TradeBot
             } 
 
             var superelapsedMs = superwatch.ElapsedMilliseconds;
-            Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
+            //Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
       
         }
 
-        private static void GetAllPricesByFile(object state)
+        private static void GetAllPrices(object state)
         {
-            WebRetrieve.GetAllPricesByFile();
-            File.AppendAllText("Matches.txt", "Cache Updated" + Environment.NewLine); //so I know if this is actually working every 20 min
+            if (o % 10 == 0)
+            {
+                recalc = true;
+
+                File.Delete("ItemList.txt");
+                File.Create("ItemList.txt");
+
+                WebRetrieve.GetAllPrices();
+                File.AppendAllText("Matches.txt", DateTime.Now.ToString("h:mm:ss tt")+" Cache Updated" + Environment.NewLine); //so I know if this is actually working every 20 min
+            }
+            else
+            {
+                recalc = false;
+                WebRetrieve.GetAllPricesByFile();
+                File.AppendAllText("Matches.txt", DateTime.Now.ToString("h:mm:ss tt") + " Cache Updated" + Environment.NewLine); //so I know if this is actually working every 20 min
+            }
+            
+            o++;
         }
 
 

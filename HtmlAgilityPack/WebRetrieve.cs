@@ -16,7 +16,9 @@ namespace TradeBot
 {
     public class WebRetrieve
     {
-
+        static int z = 3;
+        static bool omit = false;
+        
 
         public static void GetAllPrices() //gets the prices of all items the bot is interested in
         {
@@ -27,16 +29,15 @@ namespace TradeBot
 
             for (int i = 0; i < itemlist.Count() - 2;i+=3 )
             {
-                if (itemlist[1].Contains("Non-Craftable"))
+                if (itemlist[i].Contains("Non-Craftable"))
                 {
-                    string _name = itemlist[i].Replace("Non-Craftable", "");
-                    _name.Trim();
-                    WebRetrieve.CacheItemPrice(_name, 3, 0, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), true);
+                    string newname = itemlist[i].Replace("(Non-Craftable)", "").Trim();
+                    WebRetrieve.CacheItemPrice(newname, z, 0, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), omit);
                 }
 
                 else
                 {
-                    WebRetrieve.CacheItemPrice(itemlist[i], 3, 1, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), true); //also below
+                    WebRetrieve.CacheItemPrice(itemlist[i], z, 1, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), omit); //also below
                 }
             }
 
@@ -48,7 +49,7 @@ namespace TradeBot
             itemlist = File.ReadAllLines("ItemList.txt").ToList();
             for (int i = 0; i < itemlist.Count() - 2; i += 3)
             {
-                WebRetrieve.CacheItemPrice(itemlist[i], 3, 1, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), true); //also below
+                WebRetrieve.CacheItemPrice(itemlist[i], z, 1, int.Parse(itemlist[i + 1]), int.Parse(itemlist[i + 2]), omit); //also below
             }
         }
         public static List<string[]> GetClassifieds() //returns pertinent information about the most recent classifieds listed on backpack.tf. returns a list of string arrays (each string array pertains to one listing)
@@ -62,7 +63,7 @@ namespace TradeBot
             {
                 HtmlWeb Htmlweb = new HtmlWeb();
 
-                HtmlDocument Htmldocument = Htmlweb.Load("http://backpack.tf/classifieds/?tradable=1&craftable=1&australium=-1&quality=11,6&killstreak_tier=0&sort=bump"); //this page is bp.tf's classified's page, sorted by bump time/filtered for unique cosmetics
+                HtmlDocument Htmldocument = Htmlweb.Load("http://backpack.tf/classifieds/?tradable=1&craftable=1&quality=11,6&sort=bump"); //this page is bp.tf's classified's page, sorted by bump time/filtered for unique cosmetics
 
                 IEnumerable<HtmlNode> links = Htmldocument.DocumentNode.Descendants("li") //this is a tag that I observed preceded all the html nodes that contain price listings
                     .Where(x => x.Attributes.Contains("data-listing-price")) //this is an attribute that an html node containing a price listing should have
@@ -72,6 +73,7 @@ namespace TradeBot
                 {
                     string name = element.Attributes["data-name"].Value; //item name
                     string quality = element.Attributes["data-quality"].Value;
+                    string craftable = element.Attributes["data-craftable"].Value;
                     string price = element.Attributes["data-listing-price"].Value; //item price, in string format, "x ref, y keys, z, buds"; it's just how the website formats it
                     string addlink = element.Attributes["data-listing-steamid"].Value; //the lister's steamid number
                     string tradelink = ""; //the lister's trade offer link (not always provided)
@@ -82,7 +84,7 @@ namespace TradeBot
                         tradelink = element.Attributes["data-listing-offers-url"].Value;
                     }
                     
-                    string[] info = new string[5] {name, quality, price, addlink, tradelink};
+                    string[] info = new string[6] {name, quality, craftable, price, addlink, tradelink};
                     
                     if(!classifieds.Any(info.SequenceEqual))
                     {
@@ -117,7 +119,7 @@ namespace TradeBot
             empty.Clear();
             try
             {
-                Console.WriteLine("parsing"); //just for debugging
+                //Console.WriteLine("parsing"); //just for debugging
                 
                 HtmlWeb Htmlweb = new HtmlWeb();
                 HtmlDocument htmlDocument = Htmlweb.Load("http://backpack.tf/pricelist/spreadsheet");
@@ -133,7 +135,7 @@ namespace TradeBot
                     }
                     else
                     {
-                        Console.WriteLine(tr[0]);
+                        //Console.WriteLine(tr[0]);
                         if(tr[1].Contains("Cosmetic"))
                         {
                             if (tr[4] != "")
@@ -169,7 +171,7 @@ namespace TradeBot
 
                     }
                 }
-                Console.WriteLine("done!"); //absolutely necessary
+                //Console.WriteLine("done!"); //absolutely necessary
                 return targetitems;
             }
             catch (Exception ex)
@@ -202,7 +204,7 @@ namespace TradeBot
             try
             {
 
-                Console.WriteLine(name); //for debugging purposes
+                //Console.WriteLine(name); //for debugging purposes
 
                 HtmlWeb htmlWeb = new HtmlWeb();
                 do
@@ -338,6 +340,7 @@ namespace TradeBot
                 {
                     File.AppendAllText("Null_Average.txt", name + Environment.NewLine);
                 }
+                //Console.WriteLine("All Done!");
                 return Average;
             }
             catch(Exception ex)
@@ -354,19 +357,16 @@ namespace TradeBot
             var watch = Stopwatch.StartNew();
    
             List<double> PriceList = new List<double>();
-
+            List<string> ItemNames = new List<string>();
             
             int p = 1; // this will be used as the page number for the url; starts at 1, increments if required
             bool done = false; //used for the do-while loop
            
-
-
-
                 //enter try clause. if the code in the clause triggers any exception, the program moves immediately to the "catch" clause (which is further down)
             try
             {
 
-                Console.WriteLine(name); //for debugging purposes
+                //Console.WriteLine(name); //for debugging purposes
                 
                 HtmlWeb htmlWeb = new HtmlWeb();
 
@@ -384,8 +384,19 @@ namespace TradeBot
                     }
                     else
                     {
-                        url = "http://backpack.tf/classifieds?item=" + name + "&quality=" + quality + "&tradable=1&craftable=" + craftable + "&page=" + p;
+                        if (name.Contains("Australium"))
+                        {
+                            string newname = name.Replace("Australium", "").Trim();
+         
+                            url = "http://backpack.tf/classifieds?item=" + newname + "&quality=" + quality + "&tradable=1&craftable=" + craftable + "&australium=1"+"&page=" + p;
+
+                        }
+                        else
+                        {
+                            url = "http://backpack.tf/classifieds?item=" + name + "&quality=" + quality + "&tradable=1&craftable=" + craftable + "&page=" + p;
+                        }
                     }
+                    //Console.WriteLine(url);
                     HtmlDocument htmlDocument = htmlWeb.Load(url);
 
                     // Getting all links tagged 'li' and containing 'data-listing-price' (which is where the classified price is,found this through page source of the url above)
@@ -398,8 +409,8 @@ namespace TradeBot
                         links = htmlDocument.DocumentNode.Descendants("li")
                             .Where(x => x.Attributes.Contains("data-listing-price"))
                             .Where(x => !x.Attributes.Contains("data-gifted-id"))
-                            .Where(x => x.Attributes.Contains("data-listing-steamid"))
-                            .Where(x => !x.Attributes["title"].Value.Contains("Killstreak"));
+                            .Where(x => x.Attributes.Contains("data-listing-steamid"));
+                            //.Where(x => !x.Attributes["title"].Value.Contains("Killstreak"));
 
                     }
                     else
@@ -420,7 +431,7 @@ namespace TradeBot
 
                     //Now, Dumping list of prices to a string array
                     List<string> prices = links.Select(x => x.Attributes["data-listing-price"].Value).ToList();
-
+                    ItemNames = links.Select(x => x.Attributes["title"].Value).ToList();
                     string[] uprices = ulinks.Select(x => x.Attributes["data-listing-price"].Value).ToArray();
 
 
@@ -482,6 +493,11 @@ namespace TradeBot
                         PriceList.RemoveAt(PriceList.Count - 1);
                     }
                     PriceList.RemoveAt(0); //remove lowest listing
+                    while (ItemNames.Count > z + 1)
+                    {
+                        ItemNames.RemoveAt(ItemNames.Count - 1);
+                    }
+                    ItemNames.RemoveAt(0); //remove lowest listing
                 }
                 else
                 {
@@ -489,40 +505,49 @@ namespace TradeBot
                     {
                         PriceList.RemoveAt(PriceList.Count - 1);
                     }
-                }
-
-                // going to average the list now, so we can get an average price for the item (this is how the bot determines the price of an item)
-
-                double sumrefprice = 0;
-
-                for (int w = 0; w < z; w++)
-                {
-                    sumrefprice += PriceList[w];
-                }
-                var Average = sumrefprice / z;
-
-                if (Average == 0) //I encountered a case once where the average was zero, this is here just for debugging purposes
-                {
-                    File.AppendAllText("Null_Average.txt", name + Environment.NewLine);
-                }
-
-                else
-                {
-                    string price = name + " : " + Average;
-                    File.AppendAllText("Prices.txt", price + Environment.NewLine);
-                    //implement the above line if you want a file with the price for each item the bot goes through
-
-                    if (Average >= 30)
+                                    
+                    while (ItemNames.Count > z)
                     {
-                        File.AppendAllText("ItemList.txt", name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
+                        ItemNames.RemoveAt(ItemNames.Count - 1);
                     }
                 }
 
-                Method.cachelock.EnterWriteLock();
-                MemoryCache.Default.Set(name + " " + quality.ToString(), Average, absoluteExpirationPolicy);
-                Method.cachelock.ExitWriteLock();
+                // going to average the list now, so we can get an average price for the item (this is how the bot determines the price of an item)
+                if(ItemNames.Contains(name))
+                {
+                    double Average = PriceList.Average();
+                    //Console.WriteLine("Average: "+Average);
 
-                Console.WriteLine("All Done!"); //this is completely necessary
+                    double SumSquares = PriceList.Sum(d => Math.Pow(d - Average, 2));
+
+                    double stddev = Math.Sqrt(SumSquares);
+
+                    if (stddev <= 2.5 * Math.Log(.5 * Average))
+                    {
+
+                        //string price = name + " : " + Average;
+
+                        //   File.AppendAllText("Prices.txt", price + Environment.NewLine);
+
+
+                        //implement the above line if you want a file with the price for each item the bot goes through
+
+                        if (Average >= Method.reftokey * 1.5 && Method.recalc)
+                        {
+                            File.AppendAllText("ItemList.txt", name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
+                        }
+                        
+
+                        Method.cachelock.EnterWriteLock();
+                        MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), Average, absoluteExpirationPolicy);
+                        Method.cachelock.ExitWriteLock();
+
+                        //Console.WriteLine("All Done!"); //this is completely necessary
+                    }
+                }
+
+
+
             }
             catch (Exception ex)
             {
@@ -535,7 +560,7 @@ namespace TradeBot
             //measure elapsed time
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
-            Console.WriteLine("elapsed time: " + elapsedMs + "ms");
+            //Console.WriteLine("elapsed time: " + elapsedMs + "ms");
         }
     }
 }
