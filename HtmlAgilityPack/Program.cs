@@ -13,27 +13,34 @@ using System.Runtime.Caching;
 
 
 
-[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
+
 namespace TradeBot
 {      
 
     class Method
     {
 
-        private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        public static System.Timers.Timer myTimer = new System.Timers.Timer();
+        //private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        //public static System.Timers.Timer myTimer = new System.Timers.Timer();
         public static List<string[]> Listings = new List<string[]>();
         public static int q = 0;
-        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 4, 1, 6, 0, true);
-        public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 0, true);
-        public static bool done = false;
+        public static bool recalc = true;
         public static readonly ReaderWriterLockSlim cachelock = new ReaderWriterLockSlim();
+
+        public static bool done = false;
         public static int o = 1;
-        public static bool recalc = false;
+
+        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 4, 1, 6, 0, false);
+        public static double keytobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 0, false);
+        
+        
         
         static void Main(string[] args)
         {
 
+            File.Delete("ItemList.txt");
+            File.Create("ItemList.txt");
+            WebRetrieve.CacheItemPrice("Horace", 3, 1, 1, 1, false);
             bool verified = false;
             while (!verified)
             {
@@ -52,7 +59,7 @@ namespace TradeBot
                     Console.WriteLine("Incorrect Credentials");
                 }
             }
-
+            
 
             string time = DateTime.Now.ToString("h:mm:ss tt");
             Console.WriteLine(time + "---hit");
@@ -174,7 +181,7 @@ namespace TradeBot
                             object objcacheprice = MemoryCache.Default.Get(element[0]+" "+element[1]+" "+element[2]);//recall from cache
                             cachelock.ExitReadLock();
                             
-                            string s = objcacheprice.ToString();
+
                             listprice = StringParsing.StringToDouble(element[3]);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
                             
                             dubcacheprice = double.Parse(objcacheprice.ToString());
