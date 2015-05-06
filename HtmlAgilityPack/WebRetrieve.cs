@@ -128,7 +128,7 @@ namespace TradeBot
 
                 foreach (string[] tr in table.Skip(1))
                 {
-                    if(tr[1].Contains("Cosmetic")&&tr[0].Contains("Non-Craftable")||tr[0].Contains("Non-Tradable"))
+                    if((tr[1].Contains("Cosmetic")&&tr[0].Contains("Non-Craftable"))||tr[0].Contains("Non-Tradable"))
                     {
                         
                     }
@@ -320,7 +320,7 @@ namespace TradeBot
                     //if the page we're on has no listings at all (aka no unfiltered listings), break, cause there are no more listings to inspect
                     if (uprices.Count() == 0)
                     {
-                        File.AppendAllText("Page_Overload.txt", name + Environment.NewLine); //Page_Overload is just a debugging file
+                        //File.AppendAllText("Page_Overload.txt", name + Environment.NewLine); //Page_Overload is just a debugging file
                         return;
                     }
                     
@@ -389,6 +389,7 @@ namespace TradeBot
                 }
 
                 string fullname;
+                string finalname;
                 if(quality==1)
                 {
                     fullname = "Genuine " + name;
@@ -401,15 +402,23 @@ namespace TradeBot
                 else if(quality==3)
                 {
                     fullname = "Vintage " + name;
-                }
-                
+                }                
                 else
                 {
                     fullname = name;
                 }
+                if(craftable==0)
+                {
+                    finalname = "Non-Craftable " + fullname;
+                }
+                else
+                {
+                    finalname = fullname;
+                }
+                //Console.WriteLine(finalname);
 
                 // going to average the list now, so we can get an average price for the item (this is how the bot determines the price of an item)
-                if(ItemNames.Contains(fullname))
+                if(ItemNames.Contains(finalname))
                 {
 
                     double Average = PriceList.Average();
@@ -419,7 +428,7 @@ namespace TradeBot
        
 
                     double stddev = Math.Sqrt(SumSquares/(z-1));
-                    
+
 
                     if (stddev <= 2.5 * Math.Log(.5 * Average))
                     {
@@ -431,17 +440,24 @@ namespace TradeBot
 
                         //implement the above line if you want a file with the price for each item the bot goes through
 
-                        if (Average >= Method.reftokey * 1.5 && Method.recalc)
+                        if (name=="Mann Co. Supply Crate Key"||Average >= 1.5 * Method.reftokey)
                         {
-                            File.AppendAllText("ItemList.txt", name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
+                            Method.cachelock.EnterWriteLock();
+                            MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), Average, absoluteExpirationPolicy);
+                            Method.cachelock.ExitWriteLock();
+                            if(Method.recalc)
+                            {
+                                using (StreamWriter sw = new StreamWriter("Itemlist.txt", true))
+                                {
+                                    sw.Write(name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
+
+                                }
+                             //   File.AppendAllText("ItemList.txt", name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
+                            }
+ 
                         }
-                        
 
-                        Method.cachelock.EnterWriteLock();
-                        MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), Average, absoluteExpirationPolicy);
-                        Method.cachelock.ExitWriteLock();
-
-                        Console.WriteLine("All Done!"); //this is completely necessary
+                        //Console.WriteLine("All Done!"); //this is completely necessary
                     }
                 }
 
@@ -461,5 +477,6 @@ namespace TradeBot
             //var elapsedMs = watch.ElapsedMilliseconds;
             //Console.WriteLine("elapsed time: " + elapsedMs + "ms");
         }
+
     }
 }

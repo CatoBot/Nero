@@ -43,11 +43,11 @@ namespace TradeBot
                 {
                     if (i >= 2 && strings[i - 2] != "" && strings[i - 1] != "")
                     {
-                        totalprice = (double.Parse(strings[i - 2], NumberStyles.AllowDecimalPoint) + double.Parse(strings[i - 1], NumberStyles.AllowDecimalPoint)) / 2 * Method.keytobud * Method.reftokey;
+                        totalprice = (double.Parse(strings[i - 2], NumberStyles.AllowDecimalPoint) + double.Parse(strings[i - 1], NumberStyles.AllowDecimalPoint)) / 2 * Method.reftobud; 
                     }
                     else
                     {
-                        totalprice = double.Parse(strings[i - 1], NumberStyles.AllowDecimalPoint) * Method.keytobud * Method.reftokey;
+                        totalprice = double.Parse(strings[i - 1], NumberStyles.AllowDecimalPoint) * Method.reftobud;
                     }
                     
                 }
@@ -131,7 +131,7 @@ namespace TradeBot
                     refprice = double.Parse(result, NumberStyles.AllowDecimalPoint); //when parsing to double, keep the decimal point
                 }
             }
-            totalprice = budprice*Method.keytobud*Method.reftokey+keyprice*Method.reftokey + refprice;
+            totalprice = budprice*Method.reftobud+keyprice*Method.reftokey + refprice;
             return totalprice;                
         }
     }
