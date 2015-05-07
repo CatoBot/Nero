@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Runtime.Caching;
 
 namespace TradeBot
 {
+   
     class StringParsing
     {
+        
         public static double RangeToDouble(string s) //doesn't work
         {
             char[] delimiters = { ' ', '-' };   //when splitting a string, delimiters are used to tell the program where a split should be made (in this case, at empty spaces)     
@@ -83,7 +86,7 @@ namespace TradeBot
     
 
         
-        public static double StringToDouble(string s)
+        public static double StringToDouble(string s, bool api)
         {
             char[] delimiters = { ' ','-' };   //when splitting a string, delimiters are used to tell the program where a split should be made (in this case, at empty spaces)     
             int keyprice=0;
@@ -96,7 +99,7 @@ namespace TradeBot
             for (int i = 0; i < words.Length; i++)
             {
                 string keypricestr, refpricestr, budpricestr;
-                
+
                 //since all these prices follow the "x ref y keys z buds" format, the word immediately before either "ref" "keys" or "buds" is a number that needs to be parsed
 
                 if (words[i].Contains("bud"))
@@ -114,7 +117,7 @@ namespace TradeBot
                     keyprice = Int32.Parse(keypricestr);
 
                 }
-                
+
                 //ref is different cause it's a float
 
                 else if (words[i].Contains("ref"))
@@ -131,8 +134,20 @@ namespace TradeBot
                     refprice = double.Parse(result, NumberStyles.AllowDecimalPoint); //when parsing to double, keep the decimal point
                 }
             }
-            totalprice = budprice*Method.reftobud+keyprice*Method.reftokey + refprice;
-            return totalprice;                
+            if(!api)
+            {
+
+                totalprice = budprice * Method.reftobud + keyprice * Method.reftokey + refprice;
+
+            }
+            else
+            {
+                totalprice = budprice * double.Parse(MemoryCache.Default.Get("Api Bud Price").ToString()) * double.Parse(MemoryCache.Default.Get("Api Key Price").ToString()) + keyprice * double.Parse(MemoryCache.Default.Get("Api Key Price").ToString()) + refprice;
+
+            }
+            return totalprice;
+
+           
         }
     }
 }

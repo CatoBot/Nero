@@ -75,6 +75,7 @@ namespace TradeBot
                     string price = element.Attributes["data-listing-price"].Value; //item price, in string format, "x ref, y keys, z, buds"; it's just how the website formats it
                     string addlink = element.Attributes["data-listing-steamid"].Value; //the lister's steamid number
                     string tradelink = ""; //the lister's trade offer link (not always provided)
+                    string itemid = element.Attributes["data-id"].Value;
                     
 
                     if (element.Attributes.Contains("data-listing-offers-url"))
@@ -82,7 +83,7 @@ namespace TradeBot
                         tradelink = element.Attributes["data-listing-offers-url"].Value;
                     }
                     
-                    string[] info = new string[6] {name, quality, craftable, price, addlink, tradelink};
+                    string[] info = new string[7] {name, quality, craftable, price, addlink, tradelink,itemid};
                     
                     if(!classifieds.Any(info.SequenceEqual))
                     {
@@ -331,7 +332,7 @@ namespace TradeBot
                     //take each string in the string array separately
                     foreach (string element in prices)
                     {
-                        PriceList.Add(StringParsing.StringToDouble(element));
+                        PriceList.Add(StringParsing.StringToDouble(element, false));
                     }
 
                     if (omit) //stop when we have more than the number of listings we need (note, we stop at z+1 because the "omit" option in this method allows us to skip the first lowest listing (to combat trolls)
@@ -476,6 +477,22 @@ namespace TradeBot
            // watch.Stop();
             //var elapsedMs = watch.ElapsedMilliseconds;
             //Console.WriteLine("elapsed time: " + elapsedMs + "ms");
+        }
+        public static bool NotDuped(string id)
+        {
+            HtmlWeb htmlWeb = new HtmlWeb();
+            HtmlDocument htmldocument = htmlWeb.Load("http://backpack.tf/item/" + id);
+            IEnumerable<HtmlNode> links = htmldocument.DocumentNode.Descendants("div")
+                .Where(x => x.Attributes.Contains("Class"))
+                .Where(x=> x.Attributes["Class"].Value.Contains("alert-danger"));
+            if(links.Count()==0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

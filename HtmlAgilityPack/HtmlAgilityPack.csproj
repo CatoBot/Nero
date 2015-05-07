@@ -51,6 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RegexProvider">
       <HintPath>..\packages\RegexProvider.0.0.4\lib\net40\RegexProvider.dll</HintPath>
     </Reference>
@@ -75,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackpackAPI.cs" />
     <Compile Include="Notifications.cs" />
     <Compile Include="StringParsing.cs" />
     <Compile Include="WebPost.cs" />

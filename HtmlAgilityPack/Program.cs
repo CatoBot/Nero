@@ -40,8 +40,24 @@ namespace TradeBot
         
         static void Main(string[] args)
         {
-  
+
+
             
+            
+            
+            /*
+            BackpackAPI instance = BackpackAPI.FetchBackpack();
+            int success = instance.response.success;
+            string currency = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].currency;
+            double value = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value;
+            double highvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value_high;
+            
+            Console.WriteLine(highvalue + " " + currency + " " + value);
+            Console.Read();
+    */
+            BackpackAPI backpackapi = new BackpackAPI();
+            backpackapi.GetCurrency();
+
             File.Delete("ItemList.txt");
             File.Create("ItemList.txt");
 
@@ -143,6 +159,19 @@ namespace TradeBot
                             }
                         }
                     }
+                },
+                () =>
+                {
+                    using (new Timer(UpdateBackpackTF, null, TimeSpan.FromSeconds(1403), TimeSpan.FromSeconds(1403)))
+                    {
+                        while (true)
+                        {
+                            if (done)
+                            {
+                                break;
+                            }
+                        }
+                    }
                 }
                 
            
@@ -151,7 +180,11 @@ namespace TradeBot
             
             
         }
-        
+        private static void UpdateBackpackTF(object state)
+        {
+            BackpackAPI thing = new BackpackAPI();
+            thing.GetCurrency();
+        }
         private static void RefreshListings(object state)
         {     
             //Console.WriteLine(DateTime.Now.ToString("h:mm:ss tt")+"---hit");
@@ -205,7 +238,7 @@ namespace TradeBot
                         cachelock.ExitReadLock();
 
 
-                        listprice = StringParsing.StringToDouble(element[3]);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
+                        listprice = StringParsing.StringToDouble(element[3], true);//parse the price string, element[2] (since element is a string array w/ price, name, tradelink, etc)
 
                         dubcacheprice = double.Parse(objcacheprice.ToString());
                         //Console.WriteLine("cache: " + dubcacheprice);
@@ -214,19 +247,20 @@ namespace TradeBot
 
                         if (listprice + Method.reftokey < dubcacheprice)
                         {
-                            q++; //just a counter
-                            string text = element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + " : " + element[4] + " : " + element[5];
-                            lock (thisLock)
+                            if(WebRetrieve.NotDuped(element[6]))
                             {
-                                using (StreamWriter sw = new StreamWriter("Matches.txt", true))
+                                q++; //just a counter
+                                string text = element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + " : " + element[4] + " : " + element[5];
+                                lock (thisLock)
                                 {
-                                    sw.WriteLine(text);
+                                    using (StreamWriter sw = new StreamWriter("Matches.txt", true))
+                                    {
+                                        sw.WriteLine(text);
+                                    }
                                 }
+                                //File.AppendAllText("Matches.txt", text+Environment.NewLine); //record
+                                Notifications.sendmail(text);
                             }
-
-
-                            //File.AppendAllText("Matches.txt", text+Environment.NewLine); //record
-                            Notifications.sendmail(text);
                         }
                     }
                 }

@@ -19,3 +19,5 @@ C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\obj\x64\Debug\HtmlAgilityPack.
 C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\obj\x64\Debug\HtmlAgilityPack.csprojResolveAssemblyReference.cache
 C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\x64\Debug\phantomjs.exe
 C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\x64\Debug\phantomjs-license.txt
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\JLin\Desktop\ScraperDemo\HtmlAgilityPack\bin\x64\Debug\Newtonsoft.Json.xml
