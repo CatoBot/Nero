@@ -44,7 +44,6 @@ namespace TradeBot
 
             
             
-            
             /*
             BackpackAPI instance = BackpackAPI.FetchBackpack();
             int success = instance.response.success;
@@ -58,8 +57,10 @@ namespace TradeBot
             BackpackAPI backpackapi = new BackpackAPI();
             backpackapi.GetCurrency();
 
+
+
             File.Delete("ItemList.txt");
-            File.Create("ItemList.txt");
+
 
             bool verified = false;//
             while (!verified)
@@ -243,7 +244,7 @@ namespace TradeBot
                         dubcacheprice = double.Parse(objcacheprice.ToString());
                         //Console.WriteLine("cache: " + dubcacheprice);
                         //Console.WriteLine("list: "+listprice);
-                        Console.WriteLine(listprice + " | " + dubcacheprice);
+                        Console.WriteLine(element[0] + " " + element[1] + " " + element[2] + Environment.NewLine+ listprice + " | " + dubcacheprice);
 
                         if (listprice + Method.reftokey < dubcacheprice)
                         {

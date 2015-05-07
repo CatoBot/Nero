@@ -31,6 +31,7 @@ namespace HtmlAgilityPack
                 {
                     
                     driver.Navigate().GoToUrl("http://backpack.tf/classifieds/?steamid=76561198049414145&page=" + page);
+                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
                     var refreshbuttons = driver.FindElements(By.CssSelector(".btn.btn-xs.btn-bottom.btn-default.listing-relist"));
                     if (refreshbuttons.Count==0)
                     {

@@ -25,7 +25,7 @@ namespace HtmlAgilityPack
             MemoryCache.Default.Set("Api Bud Price", (budvalue + budhighvalue) / 2, absoluteExpirationPolicy);
             double keyvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value;
             double keyhighvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value_high;
-            MemoryCache.Default.Set("Api Key Price", (keyvalue + budhighvalue) / 2, absoluteExpirationPolicy);
+            MemoryCache.Default.Set("Api Key Price", (keyvalue + keyhighvalue) / 2, absoluteExpirationPolicy);
         }
         public ResponseClass response { get; set; }
 
