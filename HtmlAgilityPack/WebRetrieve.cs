@@ -75,7 +75,7 @@ namespace TradeBot
                     string price = element.Attributes["data-listing-price"].Value; //item price, in string format, "x ref, y keys, z, buds"; it's just how the website formats it
                     string addlink = element.Attributes["data-listing-steamid"].Value; //the lister's steamid number
                     string tradelink = ""; //the lister's trade offer link (not always provided)
-                    string itemid = element.Attributes["data-id"].Value;
+                    string itemid = element.Attributes["data-id"].Value.Trim();
                     
 
                     if (element.Attributes.Contains("data-listing-offers-url"))
@@ -83,12 +83,22 @@ namespace TradeBot
                         tradelink = element.Attributes["data-listing-offers-url"].Value;
                     }
                     
-                    string[] info = new string[7] {name, quality, craftable, price, addlink, tradelink,itemid};
-                    
-                    if(!classifieds.Any(info.SequenceEqual))
+                    string[] info = new string[7] {name, quality, craftable, price, addlink, tradelink, itemid};
+                    bool flag=false;
+                    foreach(string[] thingy in classifieds)
+                    {
+                        if(thingy[6]==info[6])
+                        {
+                            flag = true;
+                            break;
+                        }
+                        flag = false;
+                    }
+                    if(!flag)
                     {
                         classifieds.Add(info);
                     }
+
                 }
                 /* //ignore this stuff
                 foreach (string[] element in classifieds)
@@ -493,6 +503,18 @@ namespace TradeBot
             {
                 return false;
             }
+        }
+        public static bool Scammer(string steamid)
+        {
+            HtmlWeb htmlWeb = new HtmlWeb();
+            HtmlDocument htmldocument = htmlWeb.Load("https://steamrep.com/profiles/" + steamid);
+            string text = htmldocument.DocumentNode.SelectSingleNode("/html/head/title").InnerText;
+
+            if(text.Contains("Banned"))
+            {
+                return true;
+            }
+            return false;
         }
 
     }

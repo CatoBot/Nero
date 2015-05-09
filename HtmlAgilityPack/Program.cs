@@ -35,29 +35,18 @@ namespace TradeBot
         public static double reftobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 1, false);
 
         private static Object thisLock = new Object();
-        
+
         
         
         static void Main(string[] args)
         {
 
-
             
             
-            /*
-            BackpackAPI instance = BackpackAPI.FetchBackpack();
-            int success = instance.response.success;
-            string currency = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].currency;
-            double value = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value;
-            double highvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value_high;
             
-            Console.WriteLine(highvalue + " " + currency + " " + value);
-            Console.Read();
-    */
             BackpackAPI backpackapi = new BackpackAPI();
+            backpackapi.FetchBackpack();
             backpackapi.GetCurrency();
-
-
 
             File.Delete("ItemList.txt");
 
@@ -183,8 +172,9 @@ namespace TradeBot
         }
         private static void UpdateBackpackTF(object state)
         {
-            BackpackAPI thing = new BackpackAPI();
-            thing.GetCurrency();
+            BackpackAPI backpackapi = new BackpackAPI();
+            backpackapi.FetchBackpack();
+            backpackapi.GetCurrency();
         }
         private static void RefreshListings(object state)
         {     
@@ -203,7 +193,7 @@ namespace TradeBot
         
         private static void UpdateClassifieds(object state)
         {
-            var superwatch = Stopwatch.StartNew();
+
             //Console.WriteLine("hit" + Environment.NewLine);//debugging purposes
             
             using (StreamWriter sw = new StreamWriter("TimeLog.txt", true))
@@ -213,17 +203,16 @@ namespace TradeBot
             //File.AppendAllText("TimeLog.txt", DateTime.Now.ToString("h:mm:ss tt") + Environment.NewLine);
             List<string[]> newlistings = WebRetrieve.GetClassifieds();
 
-            List<int> dupes = new List<int>();
-            var uberwatch = Stopwatch.StartNew();
-            
-            newlistings=DeleteReps(newlistings);
+
+
+            /*
+            DeleteReps(newlistings);
 
             foreach(string[] element in Listings)
             {
                 newlistings = DeleteReps(newlistings, element);
             }
-            var uberelapsedMs = uberwatch.ElapsedMilliseconds;
-            Console.WriteLine("sub elapsed time: "+uberelapsedMs.ToString());
+            */
 
             foreach(string[] element in newlistings)
             {
@@ -245,13 +234,15 @@ namespace TradeBot
                         //Console.WriteLine("cache: " + dubcacheprice);
                         //Console.WriteLine("list: "+listprice);
                         Console.WriteLine(element[0] + " " + element[1] + " " + element[2] + Environment.NewLine+ listprice + " | " + dubcacheprice);
-
+                        
                         if (listprice + Method.reftokey < dubcacheprice)
                         {
-                            if(WebRetrieve.NotDuped(element[6]))
+                            var superwatch = Stopwatch.StartNew();
+                            if(WebRetrieve.NotDuped(element[6])&& !WebRetrieve.Scammer(element[4]))
                             {
                                 q++; //just a counter
-                                string text = element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + " : " + element[4] + " : " + element[5];
+                                string text = element[0] + " : " + element[1] + " : " + element[2] + " : " + element[3] + " : " + element[4] + " : " + element[5]+ " : " + element[6];
+                                string text_1 = "Backpack.tf price: " + BackpackAPI.GetPrice(element[0], int.Parse(element[1]), int.Parse(element[2])).ToString();
                                 lock (thisLock)
                                 {
                                     using (StreamWriter sw = new StreamWriter("Matches.txt", true))
@@ -260,8 +251,11 @@ namespace TradeBot
                                     }
                                 }
                                 //File.AppendAllText("Matches.txt", text+Environment.NewLine); //record
-                                Notifications.sendmail(text);
+                                string time = superwatch.ElapsedMilliseconds.ToString();
+                                Notifications.sendmail(text+Environment.NewLine+text_1+Environment.NewLine+time);
                             }
+                            
+                            
                         }
                     }
                 }
@@ -284,8 +278,7 @@ namespace TradeBot
                 Listings.RemoveAt(0); //trim list to 20; the maximimum number of listings/page is 20, anyway
             } 
 
-            var superelapsedMs = superwatch.ElapsedMilliseconds;
-            Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
+
       
         }
 
@@ -330,6 +323,7 @@ namespace TradeBot
         }
         public static bool ListCompare(string[] L1, string[] L2)
         {
+            
             if(L1.Count()!=L2.Count())
             {
                 return false;
@@ -348,22 +342,16 @@ namespace TradeBot
         public static List<string[]> DeleteReps (List<string[]> L1, string[] test)
         {
             int w = 0;
- 
-
             while (w < L1.Count)
             {
-
                 if (ListCompare(L1[w], test))
                 {
                     L1.RemoveAt(w);
-
-
                 }
                 else
                 {
                     w++;
                 }
-
             }
             return L1;
         }
@@ -371,11 +359,9 @@ namespace TradeBot
         {      
             int s = 0;
             while (s < L1.Count)
-            {
-                
+            {          
                 int t = 0;
                 int w =s;
-
                 while (w < L1.Count)
                 {
                     if (ListCompare(L1[w], L1[s]))
@@ -399,37 +385,5 @@ namespace TradeBot
             }
             return L1;        
         }
- 
-
-            /* //ignore
-            var superwatch = Stopwatch.StartNew();
-
-
- 
-            File.Delete("Less_than_five.txt");
-            File.Delete("Null_Average.txt");
-            File.Delete("Page_Overload.txt");
-            File.Delete("Prices.txt");
-            File.Create("Less_than_five.txt");
-            File.Create("Null_Average.txt");
-            File.Create("Page_Overload.txt");
-            File.Create("Prices.Txt");
-            
-
-
-            List<string> itemlist = new List<string>();
-
-            itemlist = WebRetrieve.GetItems();
-
-            foreach(string element in itemlist)
-            {
-                WebRetrieve.GetItemPrice(element, 3, 1, 6);
-                
-            }
-            var superelapsedMs = superwatch.ElapsedMilliseconds;
-            Console.WriteLine("elapsed time: " + superelapsedMs + "ms");
-            Console.Read();
-            */
-
     }
 }

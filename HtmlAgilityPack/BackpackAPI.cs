@@ -8,29 +8,90 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Runtime.Caching;
 
-namespace HtmlAgilityPack
+namespace TradeBot
 {
 
 
     
     class BackpackAPI
     {
+        public static double GetPrice(string name, int quality, int craftable) //make sure it's full name!, also, no unusuals. mebe later.
+        {
+            BackpackAPI instance = (BackpackAPI)MemoryCache.Default.Get("BackpackTF");
+            double value;
+            string currency;
+     
+            if(craftable==0)
+            {
+                if (name.Contains("Crate"))
+                {
+                    int crate;
+                    string[] words = name.Split('#');
+                    crate = int.Parse(words[1]);
+                    value = instance.response.items[words[0]].prices[quality].tradable.uncraftable[crate].value;
+                    currency = instance.response.items[words[0]].prices[quality].tradable.uncraftable[crate].currency;
+                }
+                else
+                {
+                    value = instance.response.items[name].prices[quality].tradable.uncraftable[0].value;
+                    currency = instance.response.items[name].prices[quality].tradable.uncraftable[0].currency;
+                }
+            }
+            else
+            {
+                if (name.Contains("Crate"))
+                {
+                    int crate;
+                    string[] words = name.Split('#');
+                    crate = int.Parse(words[1]);
+                    value = instance.response.items[words[0]].prices[quality].tradable.craftable[crate].value;
+                    currency = instance.response.items[words[0]].prices[quality].tradable.craftable[crate].currency;
+                }
+                else
+                {
+                    value = instance.response.items[name].prices[quality].tradable.craftable[0].value;
+                    currency = instance.response.items[name].prices[quality].tradable.craftable[0].currency;
+                }
+            }
+            double price = StringParsing.StringToDouble(value + " " + currency, true);
+            return price;
+
+
+        }
         public void GetCurrency()
         {
             var absoluteExpirationPolicy = new CacheItemPolicy { AbsoluteExpiration = DateTime.Now.AddMinutes(40) };
-            BackpackAPI instance = BackpackAPI.FetchBackpack();
+            
 
+            BackpackAPI instance = (BackpackAPI)MemoryCache.Default.Get("BackpackTF");
+            
             double budvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value;
             double budhighvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value_high;
-            MemoryCache.Default.Set("Api Bud Price", (budvalue + budhighvalue) / 2, absoluteExpirationPolicy);
+            if (budhighvalue != 0)
+            {
+                MemoryCache.Default.Set("Api Bud Price", (budvalue + budhighvalue) / 2, absoluteExpirationPolicy);
+            }
+            else
+            {
+                MemoryCache.Default.Set("Api Bud Price", budvalue, absoluteExpirationPolicy);
+            }
             double keyvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value;
             double keyhighvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value_high;
-            MemoryCache.Default.Set("Api Key Price", (keyvalue + keyhighvalue) / 2, absoluteExpirationPolicy);
+            if (keyhighvalue != 0)
+            {
+                MemoryCache.Default.Set("Api Key Price", (keyvalue + keyhighvalue) / 2, absoluteExpirationPolicy);
+            }
+            else
+            {
+                MemoryCache.Default.Set("Api Key Price", keyvalue, absoluteExpirationPolicy);
+            }
+
         }
         public ResponseClass response { get; set; }
 
-        public static BackpackAPI FetchBackpack()
+        public BackpackAPI FetchBackpack()
         {
+            var absoluteExpirationPolicy = new CacheItemPolicy { AbsoluteExpiration = DateTime.Now.AddMinutes(40) };
             var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Include };
             HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://backpack.tf/api/IGetPrices/v4/?key=54eea024ba8d88e8468b4848&compress=1");
 
@@ -41,6 +102,8 @@ namespace HtmlAgilityPack
             BackpackAPI instance = 
 
                 JsonConvert.DeserializeObject<BackpackAPI>(Data,settings);
+
+            MemoryCache.Default.Set("BackpackTF", instance, absoluteExpirationPolicy);
             Console.WriteLine("done");
 
             return instance; //instance;
