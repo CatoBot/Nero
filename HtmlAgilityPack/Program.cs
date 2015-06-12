@@ -14,33 +14,140 @@ using System.Runtime.Caching;
 
 
 
-namespace TradeBot
-{      
+namespace Tradebot
+{
 
     class Method
     {
 
         //private static readonly ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         //public static System.Timers.Timer myTimer = new System.Timers.Timer();
-        public static List<string[]> Listings = new List<string[]>();
 
-        public static int q = 0;
-        public static bool recalc = true;
         public static readonly ReaderWriterLockSlim cachelock = new ReaderWriterLockSlim();
+        public static List<string> IDPool = new List<string>();
+        public static List<string> NotifiedPool = new List<string>();
+        public static Notifications.Mailer mailer = new Notifications.Mailer();
 
-        public static bool done = false;
-        public static int o = 1;
 
-        public static double reftokey = WebRetrieve.ReturnItemPrice("Mann Co. Supply Crate Key", 4, 1, 6, 0, false);
-        public static double reftobud = WebRetrieve.ReturnItemPrice("Earbuds", 4, 1, 6, 1, false);
-
-        private static Object thisLock = new Object();
-
-        
-        
         static void Main(string[] args)
         {
+            
+            mailer.Initialize();
+            
+           // ItemInfo key = new ItemInfo { name = "Mann Co. Supply Crate Key", craftable = 1, quality = 6, cosmetic = false, numeric = "0", crate = 0, australium = 0, fullname = "Mann Co. Supply Crate Key", completename = "Mann Co. Supply Crate Key" };
+            //ItemInfo bud = new ItemInfo { name = "Earbuds", craftable = 1, quality = 6, cosmetic = true, numeric = "0", crate = 0, australium = 0, fullname = "Earbuds", completename = "Earbuds" };
+            bool done = false;
 
+            BackpackAPI backpack = new BackpackAPI();
+            backpack = backpack.FetchBackpack();
+            backpack.GetCurrency();
+            ItemInfo.GetCurrency();
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+            ItemList itemlist = new ItemList();
+            itemlist.FetchItemList(ref itemlist);
+            
+            foreach (ItemInfo item in itemlist.items)
+            {
+                item.GetNames();
+                
+                item.BPprice = backpack.GetPrice(item, false);
+
+                if (item.BPprice == 0)
+                {
+                    continue;
+                }
+
+                item.FetchPrice(3);
+
+            }
+            watch.Stop();
+            mailer.SendMail("time", watch.ElapsedMilliseconds.ToString());
+            Console.WriteLine("Initialization Done");
+
+            Parallel.Invoke(
+                () =>
+                {
+                    using (new Timer(RefreshListings, null, TimeSpan.FromMinutes(0), TimeSpan.FromMinutes(40)))
+                    {
+                        while (true)
+                        {
+                            if (done)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                },
+                () =>
+                {
+                    using (new Timer(UpdatePrices, null, TimeSpan.FromMinutes(45), TimeSpan.FromMinutes(40)))
+                    {
+                        while (true)
+                        {
+                            if (done)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                },
+                () =>
+                {
+                    using (new Timer(UpdateClassifieds, null, TimeSpan.FromMinutes(5), TimeSpan.FromSeconds(5)))
+                    {
+                        while (true)
+                        {
+                            if (done)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+            );
+
+        }
+
+        private static void RefreshListings( object state)
+        {
+            WebPost.ReListAll();
+        }
+        private static void UpdatePrices(object state)
+        {
+            BackpackAPI instance = new BackpackAPI();
+            instance = instance.FetchBackpack();
+            ItemList itemlist = new ItemList();
+            itemlist.FetchItemList(ref itemlist);
+            foreach (ItemInfo item in itemlist.items)
+            {
+                item.GetNames();
+                item.BPprice = instance.GetPrice(item, false);
+                if(item.BPprice==0)
+                {
+                    continue;
+                }
+
+                item.FetchPrice(3);
+            }
+            itemlist = null;
+        }
+        private static void UpdateClassifieds(object state)
+        {
+            Stopwatch miniwatch = new Stopwatch();
+            miniwatch.Start();
+            Classifieds classifieds = new Classifieds();
+            classifieds.UpdateClassifieds(mailer);
+            miniwatch.Stop();
+            Console.WriteLine("Elapesd time: "+miniwatch.ElapsedMilliseconds+"ms");
+        }
+
+
+
+        
+
+        /*
+        {
             
             
             
@@ -175,6 +282,8 @@ namespace TradeBot
             BackpackAPI backpackapi = new BackpackAPI();
             backpackapi.FetchBackpack();
             backpackapi.GetCurrency();
+
+
         }
         private static void RefreshListings(object state)
         {     
@@ -205,14 +314,14 @@ namespace TradeBot
 
 
 
-            /*
+            
             DeleteReps(newlistings);
-
+            
             foreach(string[] element in Listings)
             {
-                newlistings = DeleteReps(newlistings, element);
+                DeleteReps(newlistings, element);
             }
-            */
+            
 
             foreach(string[] element in newlistings)
             {
@@ -233,7 +342,7 @@ namespace TradeBot
                         dubcacheprice = double.Parse(objcacheprice.ToString());
                         //Console.WriteLine("cache: " + dubcacheprice);
                         //Console.WriteLine("list: "+listprice);
-                        Console.WriteLine(element[0] + " " + element[1] + " " + element[2] + Environment.NewLine+ listprice + " | " + dubcacheprice);
+                        Console.WriteLine(element[0] + " " + element[1] + " " + element[2] + " " + element[6]+Environment.NewLine+ listprice + " | " + dubcacheprice);
                         
                         if (listprice + Method.reftokey < dubcacheprice)
                         {
@@ -344,7 +453,7 @@ namespace TradeBot
             int w = 0;
             while (w < L1.Count)
             {
-                if (ListCompare(L1[w], test))
+                if (L1[w][6]==test[6])
                 {
                     L1.RemoveAt(w);
                 }
@@ -385,5 +494,7 @@ namespace TradeBot
             }
             return L1;        
         }
+    }
+         * */
     }
 }

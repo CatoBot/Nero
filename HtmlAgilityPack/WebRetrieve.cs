@@ -3,7 +3,6 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using log4net;
 using System.Reflection;
 using System.IO;
 using HtmlAgilityPack;
@@ -12,13 +11,13 @@ using System.Diagnostics;
 using System.Runtime.Caching;
 using System.Globalization;
 
-namespace TradeBot
+namespace Tradebot
 {
     public class WebRetrieve
     {
         static int z = 3;
         static bool omit = false;
-        
+        static SortedList<string, List<double>> mavg = new SortedList<string,List<double>>();
 
         public static void GetAllPrices() //gets the prices of all items the bot is interested in
         {
@@ -87,12 +86,15 @@ namespace TradeBot
                     bool flag=false;
                     foreach(string[] thingy in classifieds)
                     {
-                        if(thingy[6]==info[6])
+                        if (thingy[6] == info[6])
                         {
                             flag = true;
                             break;
                         }
-                        flag = false;
+                        else
+                        {
+                            flag = false;
+                        }
                     }
                     if(!flag)
                     {
@@ -115,9 +117,9 @@ namespace TradeBot
                 return classifieds;
 
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("error");
+                Console.WriteLine("error" + ex);
                 Console.ReadLine();
                 return null;
             }
@@ -398,38 +400,35 @@ namespace TradeBot
                         ItemNames.RemoveAt(ItemNames.Count - 1);
                     }
                 }
+                string name_1;
 
-                string fullname;
-                string finalname;
                 if(quality==1)
                 {
-                    fullname = "Genuine " + name;
+                    name_1 = "Genuine " + name;
 
                 }
                 else if(quality==11)
                 {
-                    fullname = "Strange " + name;
+                    name_1 = "Strange " + name;
                 }
                 else if(quality==3)
                 {
-                    fullname = "Vintage " + name;
-                }                
+                    name_1 = "Vintage " + name;
+                }         
                 else
                 {
-                    fullname = name;
+                    name_1=name;
                 }
+
                 if(craftable==0)
                 {
-                    finalname = "Non-Craftable " + fullname;
+                    name_1 = "Non-Craftable " + name_1;
                 }
-                else
-                {
-                    finalname = fullname;
-                }
+
                 //Console.WriteLine(finalname);
 
                 // going to average the list now, so we can get an average price for the item (this is how the bot determines the price of an item)
-                if(ItemNames.Contains(finalname))
+                if(ItemNames.Contains(name_1))
                 {
 
                     double Average = PriceList.Average();
@@ -447,21 +446,44 @@ namespace TradeBot
                         //string price = name + " : " + Average;
 
                         //   File.AppendAllText("Prices.txt", price + Environment.NewLine);
-
+                        
 
                         //implement the above line if you want a file with the price for each item the bot goes through
 
-                        if (name=="Mann Co. Supply Crate Key"||Average >= 1.5 * Method.reftokey)
+                        if (Average >= 1.5 * double.Parse(MemoryCache.Default.Get("Mann Co.Supply Crate Key").ToString()) || name.Contains("Mann Co. Supply Crate Key"))   // && Average<=BackpackAPI.GetPrice(name, quality, craftable)) use this if you want bp.tf to be the upper limit on calculated prices. I've not thoroughly tested out getprice, though
                         {
+                            
+                            
                             Method.cachelock.EnterWriteLock();
-                            MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), Average, absoluteExpirationPolicy);
-                            Method.cachelock.ExitWriteLock();
-                            if(Method.recalc)
+                            /* This will make the cache store a moving list instead of a fixed value; allows use of moving averages. I've since decided the mavg is not in the bot's benefit, but may be useful later on
+                            List<double> maverage = new List<double>();
+                            if (!MemoryCache.Default.Contains(name + " " + quality.ToString() + " " + craftable.ToString()))
                             {
+                                maverage.Add(Average);
+                            }
+                            else
+                            {
+                                maverage = (List<double>)MemoryCache.Default.Get(name + " " + quality.ToString() + " " + craftable.ToString());
+                                maverage.Add(Average);
+                            }
+
+                            while (maverage.Count>3)
+                            {
+                                maverage.RemoveAt(0);
+                            }
+
+                            MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), maverage,absoluteExpirationPolicy);
+                            */
+                            MemoryCache.Default.Set(name + " " + quality.ToString() + " " + craftable.ToString(), Average, absoluteExpirationPolicy);                            
+
+                            Method.cachelock.ExitWriteLock();
+
+                            if(true) //deprecated
+                            {
+                                
                                 using (StreamWriter sw = new StreamWriter("Itemlist.txt", true))
                                 {
                                     sw.Write(name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
-
                                 }
                              //   File.AppendAllText("ItemList.txt", name + Environment.NewLine + quality + Environment.NewLine + cosmetic + Environment.NewLine);
                             }
@@ -504,7 +526,7 @@ namespace TradeBot
                 return false;
             }
         }
-        public static bool Scammer(string steamid)
+        public static bool Scammer(string steamid) //problem is the slightest change in web structure will probably throw this off
         {
             HtmlWeb htmlWeb = new HtmlWeb();
             HtmlDocument htmldocument = htmlWeb.Load("https://steamrep.com/profiles/" + steamid);

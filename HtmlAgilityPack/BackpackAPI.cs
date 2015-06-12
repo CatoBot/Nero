@@ -8,16 +8,14 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Runtime.Caching;
 
-namespace TradeBot
+namespace Tradebot
 {
-
-
-    
     class BackpackAPI
     {
         public static double GetPrice(string name, int quality, int craftable) //make sure it's full name!, also, no unusuals. mebe later.
         {
             BackpackAPI instance = (BackpackAPI)MemoryCache.Default.Get("BackpackTF");
+            
             double value;
             string currency;
      
@@ -27,6 +25,7 @@ namespace TradeBot
                 {
                     int crate;
                     string[] words = name.Split('#');
+                    
                     crate = int.Parse(words[1]);
                     value = instance.response.items[words[0]].prices[quality].tradable.uncraftable[crate].value;
                     currency = instance.response.items[words[0]].prices[quality].tradable.uncraftable[crate].currency;
@@ -55,38 +54,86 @@ namespace TradeBot
             }
             double price = StringParsing.StringToDouble(value + " " + currency, true);
             return price;
+            
 
 
         }
         public void GetCurrency()
         {
-            var absoluteExpirationPolicy = new CacheItemPolicy { AbsoluteExpiration = DateTime.Now.AddMinutes(40) };
-            
+            ItemInfo key = new ItemInfo { name = "Mann Co. Supply Crate Key", craftable = 1, quality = 6, cosmetic = false, numeric = "0", crate = 0, australium = 0, fullname = "Mann Co. Supply Crate Key", completename = "Mann Co. Supply Crate Key"};
+            ItemInfo bud = new ItemInfo { name = "Earbuds", craftable = 1, quality = 6, cosmetic = true, numeric = "0", crate = 0, australium = 0,fullname="Earbuds",completename="Earbuds" };
+            key.BPprice = this.GetPrice(key, true);
+            bud.BPprice = this.GetPrice(bud, true);
+        }
 
-            BackpackAPI instance = (BackpackAPI)MemoryCache.Default.Get("BackpackTF");
+        public double GetPrice(Tradebot.ItemInfo item, bool Average) //make sure it's full name!, also, no unusuals. mebe later.
+        {
+            var absoluteExpirationPolicy = new CacheItemPolicy { AbsoluteExpiration = DateTime.Now.AddHours(2) };
+            double value;
+            double highvalue;
+            string currency;
             
-            double budvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value;
-            double budhighvalue = instance.response.items["Earbuds"].prices[6].tradable.craftable[0].value_high;
-            if (budhighvalue != 0)
+            try
             {
-                MemoryCache.Default.Set("Api Bud Price", (budvalue + budhighvalue) / 2, absoluteExpirationPolicy);
+                if (item.craftable == 1)
+                {
+                    value = this.response.items[item.fullname].prices[item.quality].tradable.craftable[item.crate].value;
+                    currency = this.response.items[item.fullname].prices[item.quality].tradable.craftable[item.crate].currency;
+                    highvalue = this.response.items[item.fullname].prices[item.quality].tradable.craftable[item.crate].value_high;
+                }
+                else
+                {
+                    value = this.response.items[item.fullname].prices[item.quality].tradable.uncraftable[item.crate].value;
+                    currency = this.response.items[item.fullname].prices[item.quality].tradable.uncraftable[item.crate].currency;
+                    highvalue = this.response.items[item.fullname].prices[item.quality].tradable.uncraftable[item.crate].value_high;
+                }
+                double dub;
+                if (Average)
+                {
+                    if (highvalue != 0)
+                    {
+                        dub = StringParsing.StringToDouble((value + highvalue) / 2 + " " + currency, true);
+                        item.BPprice = dub;
+                        //Method.cachelock.EnterWriteLock();
+
+                        MemoryCache.Default.Set(item.completename + " BP", item.BPprice, absoluteExpirationPolicy);
+
+                        //Method.cachelock.ExitWriteLock();
+                        return dub;
+                    }
+
+                }
+
+                dub = StringParsing.StringToDouble(value + " " + currency, true);
+
+
+
+                item.BPprice = dub;
+
+                Method.cachelock.EnterWriteLock();
+
+                MemoryCache.Default.Set(item.completename + " BP", item.BPprice, absoluteExpirationPolicy);
+
+                Method.cachelock.ExitWriteLock();
+
+                return dub;
             }
-            else
+            catch (Exception ex)
             {
-                MemoryCache.Default.Set("Api Bud Price", budvalue, absoluteExpirationPolicy);
+                Console.WriteLine("BP Api error" +" " + ex);
+                using (StreamWriter sw = new StreamWriter("CorruptNames.txt", true))
+                {
+                    sw.WriteLine(item.fullname.ToString());
+                }
+                item.BPprice = 0;
+                return 0;
             }
-            double keyvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value;
-            double keyhighvalue = instance.response.items["Mann Co. Supply Crate Key"].prices[6].tradable.craftable[0].value_high;
-            if (keyhighvalue != 0)
-            {
-                MemoryCache.Default.Set("Api Key Price", (keyvalue + keyhighvalue) / 2, absoluteExpirationPolicy);
-            }
-            else
-            {
-                MemoryCache.Default.Set("Api Key Price", keyvalue, absoluteExpirationPolicy);
-            }
+
 
         }
+
+
+
         public ResponseClass response { get; set; }
 
         public BackpackAPI FetchBackpack()
@@ -103,11 +150,11 @@ namespace TradeBot
 
                 JsonConvert.DeserializeObject<BackpackAPI>(Data,settings);
 
-            MemoryCache.Default.Set("BackpackTF", instance, absoluteExpirationPolicy);
+            //MemoryCache.Default.Set("BackpackTF", instance, absoluteExpirationPolicy);
             Console.WriteLine("done");
 
-            return instance; //instance;
-
+            return instance; 
+            
         }
 
         public class ResponseClass
@@ -126,10 +173,14 @@ namespace TradeBot
         }
         public class TradableClass
         {
+
+            [JsonProperty("Craftable")]
             [JsonConverter(typeof(BackpackConverter<CraftableClass>))]
 
             public SortedList<int, CraftableClass> craftable { get; set; }
 
+            [JsonProperty("Non-Craftable")]
+            [JsonConverter(typeof(BackpackConverter<CraftableClass>))]
             public SortedList<int, CraftableClass> uncraftable { get; set; }
         }
         public class CraftableClass

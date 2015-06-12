@@ -79,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackpackAPI.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Classifieds.cs" />
+    <Compile Include="TradeInfo.cs" />
+    <Compile Include="ItemInfo.cs" />
+    <Compile Include="ItemList.cs" />
     <Compile Include="Notifications.cs" />
     <Compile Include="StringParsing.cs" />
     <Compile Include="WebPost.cs" />
